@@ -1,0 +1,276 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[12pt,a3paper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% modern themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}
+
+\usepackage{tabularx}
+\usepackage{ragged2e}
+% if you are not using xelatex ou lualatex, replace by the encoding you are using
+% \usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[left=1.5cm, right=1.5cm, top=1cm, bottom=1.1cm]{geometry}
+\usepackage{multicol}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{import}
+\usepackage{fontawesome5}
+
+
+% personal data
+\name{SOUMYADEEP}{BANIK}
+% \title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
+\address{Mumbai, Maharashtra, India}{}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+ %\phone[mobile]{(+88)0 1718268856}                   % optional, remove / comment the line if not wanted
+% \phone[fixed]{01234 123456}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+% \email{xpan1@swarthmore.edu}                               % optional, remove / comment the line if not wanted
+% \homepage{shawnpan.me}                         % optional, remove / comment the line if not wanted
+\extrainfo{Field of Interest: Computer Vision, Deep Learning, Image Processing}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+  
+\newcommand*{\customcventry}[7][.25em]{
+  \begin{tabular}{@{}l} 
+    {\bfseries #4}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\bfseries #5}
+  \end{tabular} \\
+  \begin{tabular}{@{}l} 
+    {\itshape #3}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #2}
+  \end{tabular}
+  \ifx&#7&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#7%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\newcommand*{\customcvproject}[4][.25em]{
+%   \vfill\noindent
+  \begin{tabular}{@{}l} 
+    {\bfseries #2}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #3}
+  \end{tabular}
+  \ifx&#4&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#4%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\setlength{\tabcolsep}{12pt}
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+\vspace*{-15mm}
+
+\begin{center}
+\begin{tabular}{ c c c c }
+ %\faGlobe\enspace sites.google.com  
+ \faIcon{envelope}\enspace soumya.d.banik@gmail.com
+ & \faGithub\enspace \href{https://github.com/soumyadbanik}{soumyadbanik} & \faLinkedin\enspace\href{https://www.linkedin.com/in/soumya-d-banik}{soumya-d-banik}\enspace\enspace \faMobile\enspace +91 8478860607\\ 
+\end{tabular}
+\end{center}
+% \vspace*{.01em}
+\section{About}
+Data Scientist with 3+ years of experience working in Computer Vision \& Deep Learning. Actively looking for a role in AI, Data Science, or Computer Vision to contribute effectively into real-world business problems and solutions.
+
+\section{Experience}
+{\customcventry{April 2024–Present}{Building state-of-the-art AI solutions for sports broadcasting}{Computer Vision Engineer - \textit{Quidich Innovation Labs}}{Mumbai}{}{}}
+\begin{itemize}
+    \item \textbf{Decision Review Systems (DRS)}
+    \begin{itemize}
+        \item Developed and deployed real-time automated no-ball and run-out detection systems from high-speed cameras (100–120 fps)
+    \end{itemize}
+    \item \textbf{StiQy}
+    \begin{itemize}
+        \item Designed ground perspective tracking algorithms for real-time (50 fps) virtual graphics overlays on cricket fields, significantly enhancing viewer engagement and experience.
+    \end{itemize}
+    \item \textbf{HyperView}
+    \begin{itemize}
+        \item Developing advanced real-time pose estimation algorithms.
+        \item Reconstructed 3D player poses using 3D triangulation (90\% accuracy) with a multi-camera setup, integrating them into 3D graphics and motion builder software (Unreal Engine, Blender, Maya) to enhance realism and analytics in sports broadcasts.
+    \end{itemize}
+\end{itemize}
+
+
+
+{\customcventry{December 2022-January 2024}{Building edge-centric vision models for video surveillance}{Junior Data Scientist - \textit{HappyMonk.ai}}{Bangalore}{}{}}
+\begin{itemize}
+    \item \textbf{Human Activity Recognition}
+    \begin{itemize}
+        \item Led the entire project lifecycle, overseeing data collection, preparation, preprocessing, model development to deployment on edge devices
+        \item Leveraged \textbf{SLOWFAST} network to develop a \textbf{spatio-temporal} deep learning model to accurately detect \textbf{human activities} within a scene
+        \item Automated the entire pipeline to streamline the production processes
+    \end{itemize}
+    \item \textbf{Space Utilization}
+    \begin{itemize}
+        \item Employed image processing techniques to implement an algorithm to show the empty spaces within an extensive inventory area
+    \end{itemize}
+    \item \textbf{Object detection}
+    \begin{itemize}
+        \item Collaborated in multiple projects on developing the dataset, object detection models(e.g. YOLO V5, YOLO v8) across different domains, addressing business problems such as \textbf{face detection}, \textbf{object counting}, \textbf{emotion recognition}, and \textbf{fire-smoke detection} etc.
+        \item Collaborated with the team to efficiently deploy these models on edge devices
+    \end{itemize}
+\end{itemize}
+\vspace*{.3em}
+{\customcventry{October 2021-November 2022}{Developing a distributed Cognitive System for Healthcare}{Project Linked Junior Research Fellow - \textit{Indian Statistical Institute}}{Kolkata}{}{}}
+Goal: To recognize abnormal human activities from spatial-temporal data in terms of medical conditions e.g. coughing, falling down, putting hands on chest, belly, head, lying for a long time, etc. Working on human action recognition from RGB video and human skeleton data, targeted at healthcare units.
+{\begin{itemize}
+    \item Majorly focused on Graph representation learning for Human Skeletons.
+\end{itemize}}
+%\list{\entry{Distributed Cognitive System for Healthcare}\entryextra{A more detailed explanation of the project}
+
+
+\section{Skillset}
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+Topics of Interest\ & Pose Estimation(2D, 3D), Depth Estimation, 3D point cloud, Object detection, 3D Computer Vision,\\ 
+        & Human Activity Recognition, Object tracking, Semantic segmentation, OCR(Optical Character Recognition) \\
+Tools \& Techniques\ & Machine Learning(Regression, Classification, Decision Trees, Random Forests, \\
+        & Time series Forecasting and Clustering), Deep learning(DNN, RNN, LSTM, Encoder-Decoder Models),\\
+        & Graph Representation learning, GNN(Graph Neural Networks), Data Structure, Algorithm, OOPS \\
+Frameworks\ & Pytorch, Ultralytics, Flask API, Fast API, AWS Lambda, Nvidia-Deep Stream, TAO, Cuda, Cudnn \\
+Data Analysis\ & Pandas, Numpy, Matplotlib, Seaborn  \\
+Model Optimization\ & Onnx, TensorRT \\
+Programming Languages\ & Python, C, HTML/CSS, SQL \\
+Technical\ & Git, Linux, \LaTeX, Docker, ngrok, MLOps, CVAT(annotation tool), OpenCV, Jupyter lab, Google Colab \\
+AI Tools\ & ChatGPT, Perplexity, Github Co-Pilot, Claude.ai
+\end{tabular}
+\section{Projects}
+{\customcvproject{SpecsKart - Building a virtual specs try-on platform and recommendation system [\textit{In collaboration with AI-LENS}]}{January 2024-Present}
+{\begin{itemize}
+    \item Projecting the chosen specs onto the user's face using facial keypoint features, accommodating various facial orientations.
+    \item Implementing a recommendation system based on past specs choices.
+    \item\textbf{Technologies:} Python3, Matplotlib, MediaPipe, OpenCV, Numpy, Streamlit app, Scipy, Fast api, AWS Lambda
+\end{itemize}
+}
+}
+% {\customcvproject{Forecasting Store Sales \enspace \href{https://github.com/soumyadbanik/Store_sales_forecasting_kaggle.git}{\faGithub}}{September 2022}
+% {\begin{itemize}
+%     \item Predicting sales on large grocery data from Ecuadorian-based grocery store
+%     \item Collected the dataset from Kaggle competition(\href{https://www.kaggle.com/competitions/store-sales-time-series-forecasting/data}{Link})
+%     \item\textbf{Technologies:} Using Pandas, Python3 notebook, Matplotlib, Seaborn, for analysing trend, seasonality, cycles etc.
+% \end{itemize}
+% }
+% }
+{\customcvproject{Surveying Social Distancing in Aerial Videos using Computer Vision\enspace \href{https://docs.google.com/presentation/d/1IGtcHEopTI3RaLDRwxQGYA-XjanRLYoY4K2u6hszFt8/edit?usp=sharing}{\faFilePowerpointO}\enspace \href{https://github.com/soumyadbanik/Safe-Distance-Monitoring-APP}{\faGithub}\enspace \href{https://drive.google.com/file/d/1T6KgwVS5qZ_5baK53xH7IHpefNW-3cVM/view?usp=sharing}{\faFileText}}{May 2021-July 2021}
+{\begin{itemize}
+    \item Built a web app for monitoring the number of social distancing violations in a video by Multiple object tracking. 
+    \item Worked with a large scale video dataset i.e. \href{https://cvgl.stanford.edu/projects/uav_data/}{Stanford Drone Dataset (link)}
+    \item Used Deep SORT for performing the Multiple object tracking and YOLO-V4 for the detection task
+    \item \textbf{Technologies:} Python3, Matplotlib, Seaborn, Pandas, Darknet, Tensorflow, HTML, Flask API
+\end{itemize}
+}
+}
+{\customcvproject{Quadtree based Image Saliency mapping \href{https://github.com/soumyadbanik/Quadtree-Image-saliency-mapping}{\faGithub}}{October 2020-December 2020}
+{\begin{itemize}
+  \item Proposed a Quadtree Based approach for getting Salient features from an image which can significantly reduce the computational complexity of a CNN model from $O(M^2N^2C)$ to $O(M^2NC)$.
+  \item\textbf{Technologies:} Pytorch, Python3
+\end{itemize}
+}}
+{\customcvproject{Video Steganography using LSB Technique by a Unique Frame Selection Method \href{https://github.com/soumyadbanik/video_steganography}{\faGithub}}{March 2019-May 2019} 
+{\begin{itemize}
+  \item Proposed a unique frame selection method that takes the first number from the pseudo-random number sequences generated by our modular function (a Linear congruential generator) by taking a seed value as the secret key defined by the sender and increased the security.
+  \item \textbf{Technologies:} OpenCV, Numpy,Pandas,Python3, Anaconda
+\end{itemize}
+}
+}
+\section{Education}
+{\customcventry{2019-2021}{M.Sc in Computer Science}{Ramakrishna Mission Vivekananda Educational and Research Institute}{Belur, Howrah}{}{}}
+{\customcventry{2016-2019}{B.Sc(Hons) in Computer Science}{Ramakrishna Mission Residential College(Autonomous)}{Narendrapur, Kolkata}{}{}}
+
+\section{Misc.}
+\textbf{Languages}- Bengali, Hindi, English\\
+\textbf{Interests}- Photography, Graphics Design, Illustration, Music\\
+\textbf{Experience}- Organized ENVISION'19, a first-ever tech event in RKMRC, Narendrapur by Computer Science department
+
+
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+% \nocite{*}
+% \bibliographystyle{plain}
+% \bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+%-----       letter       ---------------------------------------------------------
+
+%\\\textbf{a Unique Frame Selection Method}%
+% \section{RESEARCH INTEREST}
+% Machine Learning, Data Mining.
+
+% \section{EDUCATION}
+% {\customcventry{March,2013-March,2017}{B.Sc in Computer Science and Engineering   }{Khulna University of Engineering \& Technology}{Khulna, Bangladesh}{}{}}
+
+% CGPA: 3.76/4.00 (5th among 61 students) \\
+% CGPA of last 2 years : 3.89
+
+% %{\customcventry{August 2011}{Bachelor of Technology in Applied Electronics and Instrumentation Engineering   }{West Bengal University of Technology}{Kolkata, West India}{}{}}
+
+% \section{ TEACHING EXPERIENCE}
+
+% {\customcventry{September 2017 - present}{Lecturer, Department of Computer Science and Engineering}{Daffodil International University}{Dhaka, Bangladesh}{}{}
+
+% }
+% \vspace{2mm}
+% {\customcventry{June 2017 - August 2017}{Lecturer, Department of Computer Science and Engineering}{University of Information Technology and Sciences}{Dhaka, Bangladesh}{}{}
+% }
+% \vspace{2mm}
+
+% \textbf{Courses taught:}
+% Compiler Design, Compiler Design Laboratory, Database Management System,Database Management System Laboratory, Operating System, Artificial Intelligence, Artificial Intelligence Laboratory, Theory of Computation, Algorithm , Algorithm Laboratory, Computer Fundamentals, Discrete Mathematics.
+
+
+\end{document}
+
+
+%% end of file `template.tex'.
