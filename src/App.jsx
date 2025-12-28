@@ -5,6 +5,9 @@ import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import ExtraCurricular from './components/ExtraCurricular';
+import ScrollProgress from './components/ScrollProgress';
+import CustomCursor from './components/CustomCursor';
+
 
 function App() {
     // Smooth scroll behavior
@@ -17,6 +20,8 @@ function App() {
 
     return (
         <div className="App">
+            <CustomCursor />
+            <ScrollProgress />
             <Navbar />
 
             <main>

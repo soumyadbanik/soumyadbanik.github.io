@@ -11,9 +11,23 @@ const Hero = () => {
             alignItems: 'center',
             justifyContent: 'center',
             position: 'relative',
-            paddingTop: '80px'
+            paddingTop: '80px',
+            overflow: 'hidden'
         }}>
-            <div className="container" style={{ maxWidth: '1000px', textAlign: 'left' }}>
+            {/* Background Effect */}
+            <div style={{
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+                width: '60vw',
+                height: '60vw',
+                background: 'radial-gradient(circle, rgba(59,130,246,0.1) 0%, rgba(0,0,0,0) 70%)',
+                pointerEvents: 'none',
+                zIndex: -1
+            }} />
+
+            <div className="container" style={{ maxWidth: '1000px', textAlign: 'left', zIndex: 1 }}>
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -32,7 +46,7 @@ const Hero = () => {
                         fontWeight: 700,
                         lineHeight: 1,
                         marginBottom: '1rem',
-                        background: 'linear-gradient(to right, #fff, #888)',
+                        background: 'linear-gradient(to right, #fff, #999)',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent'
                     }}

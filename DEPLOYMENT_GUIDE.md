@@ -27,35 +27,35 @@ I have already generated the source code for you. Now you need to install the de
     1.  Place images in the `public/` folder (create one if it doesn't exist).
     2.  Update `src/components/ExtraCurricular.jsx` to reference them.
 
-## 4. Deployment to GitHub Pages
-To host this on `soumyadbanik.github.io`, follow these steps:
+## 4. Deployment to GitHub Pages (Automated CI/CD)
 
-### Option A: Manual Build & Push (Simplest)
-1.  Build the project:
-    ```bash
-    npm run build
-    ```
-2.  This creates a `dist` folder.
-3.  You can configure GitHub Pages (in Repo Settings > Pages) to serve from a specific branch.
+I have configured a **GitHub Actions** workflow (`.github/workflows/deploy.yml`) that will automatically build and deploy your site whenever you push to GitHub.
 
-### Option B: Automated Deploy (Recommended)
-1.  Install the `gh-pages` deployer:
-    ```bash
-    npm install gh-pages --save-dev
-    ```
-2.  Add this script to your `package.json` (inside `"scripts"`):
-    ```json
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
-    ```
-3.  Run the deploy command:
-    ```bash
-    npm run deploy
-    ```
-4.  Your site will be live at `https://soumyadbanik.github.io/soumyadbanik/` (or root if configured).
+### Step 1: Create Repository
+1.  Go to [GitHub.com](https://github.com/new).
+2.  Create a new repository named `soumyadbanik.github.io` (or `soumyadbanik` if you prefer a project page).
+3.  Do **not** extract a README or .gitignore (we already have them).
 
-## Design Philosophy Implemented
--   **Structure**: Clean, semantic HTML5 with React components.
--   **Aesthetics**: "Dark Mode" luxury tech vibe. Uses a deep black/gray palette with an Electric Blue accent (`#3b82f6`).
--   **Animations**: Used `framer-motion` for staggering entrance animations (fade-ins) and hover effects on project cards.
--   **Typography**: Used 'Space Grotesk' for headings (modern, tech-focused) and 'Outfit' for body text (clean, rigorous).
+### Step 2: Push Your Code
+You need to push this code to the new repository. Open your terminal in this folder (`C:\Users\Soumya\Documents\soumyadbanik`) and run the following (replace `YOUR_REPO_URL` with the one from Step 1, e.g., `https://github.com/soumyadbanik/soumyadbanik.github.io.git`):
+
+```bash
+git remote add origin YOUR_REPO_URL
+git push -u origin main
+```
+
+### Step 3: Configure Pages
+1.  Go to your Repository Settings > **Pages**.
+2.  Under **Build and deployment** > **Source**, select **GitHub Actions** (it might default to "Deploy from a branch", change it to "GitHub Actions").
+3.  That's it! Looking at the "Actions" tab in your repo, you should see a "Deploy to GitHub Pages" workflow running.
+
+### Future Updates
+Whenever you want to update your portfolio:
+1.  Edit the code or `resume.js`.
+2.  Commit the changes:
+    ```bash
+    git add .
+    git commit -m "Updated resume"
+    git push
+    ```
+3.  The site will automatically update within minutes.
