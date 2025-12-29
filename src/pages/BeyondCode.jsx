@@ -30,7 +30,7 @@ const YouTubeEmbed = ({ id, title }) => (
             allowFullScreen
         />
     </div>
-    </div >
+
 );
 
 const InstagramEmbed = ({ url, title }) => {
