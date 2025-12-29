@@ -1,20 +1,17 @@
 export const creativeData = {
     photography: [
-        { id: 1, type: "image", url: "https://www.instagram.com/p/DFlObFBzktI/?img_index=3", title: "Street Photography" },
-        { id: 2, type: "image", url: "https://www.instagram.com/p/DHQw3ZGPLKa/?img_index=2", title: "Cinematic Shot" },
+        { id: 1, type: "instagram", url: "https://www.instagram.com/p/DFlObFBzktI/", title: "Instagram Feed" },
     ],
     shortFilms: [
-        { id: "dQw4w9WgXcQ", type: "youtube", title: "The Journey - Short Film" }, // Rick Roll placeholder (classic test) -> User to replace
-        { id: "LXb3EKWsInQ", type: "youtube", title: "Cinematic Reel 2024" }, // 4k nature
+        { id: "LXb3EKWsInQ", type: "youtube", title: "Cinematic Reel 2024" },
     ],
     vlogs: [
-        { id: "tAGnKpE4NCI", type: "youtube", title: "Travel Vlog: Mountains" }, // Metallica? No, generic
+        { id: "tAGnKpE4NCI", type: "youtube", title: "Travel Vlog" },
     ],
     songCovers: [
         { id: "3jWRrafhO7M", type: "youtube", title: "Acoustic Session" },
     ],
     sketches: [
-        { id: 1, type: "image", url: "https://images.unsplash.com/photo-1513364776144-60967b0f800f", title: "Charcoal Study" },
-        { id: 2, type: "image", url: "https://images.unsplash.com/photo-1544531586-fde5298cdd40", title: "Digital Abstract" },
+        { id: 1, type: "image", url: "https://images.unsplash.com/photo-1513364776144-60967b0f800f", title: "Latest Sketch" },
     ]
 };
