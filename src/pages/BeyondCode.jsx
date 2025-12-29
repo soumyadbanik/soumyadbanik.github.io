@@ -30,7 +30,49 @@ const YouTubeEmbed = ({ id, title }) => (
             allowFullScreen
         />
     </div>
+    </div >
 );
+
+const InstagramEmbed = ({ url, title }) => {
+    // Extract ID from URL if full URL is passed, otherwise assume it's an ID
+    // Supports: https://www.instagram.com/p/ID/, https://instagr.am/p/ID/
+    let postId = url;
+    try {
+        if (url.includes('instagram.com') || url.includes('instagr.am')) {
+            const match = url.match(/\/p\/([^/]+)/);
+            if (match) postId = match[1];
+        }
+    } catch (e) {
+        console.error("Invalid Instagram URL:", url);
+    }
+
+    return (
+        <div style={{
+            position: 'relative',
+            width: '100%',
+            borderRadius: '12px',
+            overflow: 'hidden',
+            boxShadow: '0 4px 20px rgba(0,0,0,0.3)',
+            background: 'white', // Instagram embeds are usually white
+            height: '480px', // Fixed height for vertical posts
+            display: 'flex',
+            justifyContent: 'center'
+        }}>
+            <iframe
+                src={`https://www.instagram.com/p/${postId}/embed`}
+                title={title}
+                style={{
+                    border: 0,
+                    width: '100%',
+                    height: '100%',
+                    overflow: 'hidden'
+                }}
+                scrolling="no"
+                allowTransparency="true"
+            />
+        </div>
+    );
+};
 
 const ImageCard = ({ url, title }) => (
     <motion.div
@@ -84,6 +126,8 @@ const CreativeSection = ({ title, items }) => {
                     >
                         {item.type === 'youtube' ? (
                             <YouTubeEmbed id={item.id} title={item.title} />
+                        ) : (item.type === 'instagram' || (item.url && item.url.includes('instagram.com'))) ? (
+                            <InstagramEmbed url={item.url || item.id} title={item.title} />
                         ) : (
                             <ImageCard url={item.url} title={item.title} />
                         )}

@@ -1,8 +1,7 @@
 export const creativeData = {
     photography: [
-        { id: 1, type: "image", url: "https://images.unsplash.com/photo-1542038784456-1ea8c935640e", title: "Street Photography" },
-        { id: 2, type: "image", url: "https://images.unsplash.com/photo-1554080353-a576cf803bda", title: "Portrait Mood" },
-        { id: 3, type: "image", url: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32", title: "Cinematic Shot" },
+        { id: 1, type: "image", url: "https://www.instagram.com/p/DFlObFBzktI/?img_index=3", title: "Street Photography" },
+        { id: 2, type: "image", url: "https://www.instagram.com/p/DHQw3ZGPLKa/?img_index=2", title: "Cinematic Shot" },
     ],
     shortFilms: [
         { id: "dQw4w9WgXcQ", type: "youtube", title: "The Journey - Short Film" }, // Rick Roll placeholder (classic test) -> User to replace
