@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { creativeData } from '../data/creative';
 import { Play, Instagram, Image as ImageIcon } from 'lucide-react';
@@ -30,16 +30,15 @@ const YouTubeEmbed = ({ id, title }) => (
             allowFullScreen
         />
     </div>
-
 );
 
 const InstagramEmbed = ({ url, title }) => {
     // Extract ID from URL if full URL is passed, otherwise assume it's an ID
-    // Supports: https://www.instagram.com/p/ID/, https://instagr.am/p/ID/
+    // Supports: https://www.instagram.com/p/ID/, https://instagr.am/p/ID/, /reel/ID/
     let postId = url;
     try {
         if (url.includes('instagram.com') || url.includes('instagr.am')) {
-            const match = url.match(/\/p\/([^/]+)/);
+            const match = url.match(/\/(?:p|reel)\/([^/]+)/);
             if (match) postId = match[1];
         }
     } catch (e) {
@@ -53,8 +52,8 @@ const InstagramEmbed = ({ url, title }) => {
             borderRadius: '12px',
             overflow: 'hidden',
             boxShadow: '0 4px 20px rgba(0,0,0,0.3)',
-            background: 'white', // Instagram embeds are usually white
-            height: '480px', // Fixed height for vertical posts
+            background: 'white',
+            height: '650px',
             display: 'flex',
             justifyContent: 'center'
         }}>
@@ -74,46 +73,51 @@ const InstagramEmbed = ({ url, title }) => {
     );
 };
 
-const ImageCard = ({ url, title }) => (
-    <motion.div
-        whileHover={{ y: -5 }}
-        style={{
-            position: 'relative',
-            borderRadius: '12px',
-            overflow: 'hidden',
-            height: '300px',
-            cursor: 'pointer'
-        }}
-    >
-        <img
-            src={url}
-            alt={title}
-            style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s' }}
-        />
-        <div style={{
-            position: 'absolute',
-            bottom: 0,
-            left: 0,
-            right: 0,
-            padding: '1.5rem',
-            background: 'linear-gradient(to top, rgba(0,0,0,0.9), transparent)',
-            color: 'white',
-            fontWeight: '500'
-        }}>
-            {title}
-        </div>
-    </motion.div>
-);
+const ImageCard = ({ url, title, link }) => {
+    const CardContent = (
+        <motion.div
+            whileHover={{ y: -5 }}
+            style={{
+                position: 'relative',
+                borderRadius: '12px',
+                overflow: 'hidden',
+                height: '300px',
+                cursor: 'pointer'
+            }}
+        >
+            <img
+                src={url}
+                alt={title}
+                style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s' }}
+            />
+            <div style={{
+                position: 'absolute',
+                bottom: 0,
+                left: 0,
+                right: 0,
+                padding: '1.5rem',
+                background: 'linear-gradient(to top, rgba(0,0,0,0.9), transparent)',
+                color: 'white',
+                fontWeight: '500'
+            }}>
+                {title}
+            </div>
+        </motion.div>
+    );
 
+    if (link) {
+        return (
+            <a href={link} target="_blank" rel="noreferrer" style={{ display: 'block' }}>
+                {CardContent}
+            </a>
+        );
+    }
 
-
-
+    return CardContent;
+};
 
 const CreativeSection = ({ title, items }) => {
     if (!items || items.length === 0) return null;
-
-    // Special layout for Photography (Insta Grid)
-
 
     return (
         <section>
@@ -136,7 +140,7 @@ const CreativeSection = ({ title, items }) => {
                         ) : (item.type === 'instagram' || (item.url && item.url.includes('instagram.com'))) ? (
                             <InstagramEmbed url={item.url || item.id} title={item.title} />
                         ) : (
-                            <ImageCard url={item.url} title={item.title} />
+                            <ImageCard url={item.url} title={item.title} link={item.link} />
                         )}
                     </motion.div>
                 ))}
@@ -163,21 +167,54 @@ const BeyondCode = () => {
                 }}>
                     Beyond Code
                 </h1>
-                <p style={{ maxWidth: '600px', marginBottom: '1rem', color: 'var(--text-secondary)', fontSize: '1.2rem' }}>
+                <p style={{ maxWidth: '600px', marginBottom: '4rem', color: 'var(--text-secondary)', fontSize: '1.2rem' }}>
                     Exploring the world through lenses, melodies, and colors.
                 </p>
-
-                <div style={{ display: 'flex', gap: '1rem', marginBottom: '4rem' }}>
-                    <a href="https://instagram.com/soumyadbanik" target="_blank" rel="noreferrer" style={{ color: 'var(--accent)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                        <Instagram size={18} /> @soumyadbanik
-                    </a>
-                </div>
 
                 <CreativeSection title="Photography" items={creativeData.photography} />
                 <CreativeSection title="Short Films" items={creativeData.shortFilms} />
                 <CreativeSection title="Vlogs" items={creativeData.vlogs} />
                 <CreativeSection title="Song Covers" items={creativeData.songCovers} />
                 <CreativeSection title="Sketches" items={creativeData.sketches} />
+
+                <div style={{
+                    marginTop: '6rem',
+                    paddingTop: '3rem',
+                    borderTop: '1px solid #333',
+                    textAlign: 'center'
+                }}>
+                    <p style={{ marginBottom: '1.5rem', color: '#888', fontSize: '1.1rem' }}>See clips on my profiles</p>
+                    <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center' }}>
+                        <a href="https://instagram.com/soumyadbanik" target="_blank" rel="noreferrer" style={{
+                            color: 'var(--accent)',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '0.8rem',
+                            padding: '0.8rem 1.5rem',
+                            border: '1px solid var(--accent)',
+                            borderRadius: '50px',
+                            fontSize: '1.1rem',
+                            textDecoration: 'none',
+                            transition: 'all 0.3s'
+                        }}>
+                            <Instagram size={24} /> @soumyadbanik
+                        </a>
+                        <a href="https://youtube.com/@soumyadbanik" target="_blank" rel="noreferrer" style={{
+                            color: '#ff4444',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '0.8rem',
+                            padding: '0.8rem 1.5rem',
+                            border: '1px solid #ff4444',
+                            borderRadius: '50px',
+                            fontSize: '1.1rem',
+                            textDecoration: 'none',
+                            transition: 'all 0.3s'
+                        }}>
+                            <Play size={24} fill="#ff4444" /> YouTube
+                        </a>
+                    </div>
+                </div>
 
             </motion.div>
         </div>

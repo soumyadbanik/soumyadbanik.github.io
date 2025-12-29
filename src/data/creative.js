@@ -2,16 +2,21 @@ export const creativeData = {
     photography: [
         {
             id: 1,
-            type: "image",
-            url: "/images/insta_grid.png",  // User should replace this single file
-            link: "https://instagram.com/soumyadbanik"
+            type: "instagram",
+            url: "https://www.instagram.com/p/DFlObFBzktI/",
+            title: "Latest Shot"
         }
     ],
     shortFilms: [
         { id: "LXb3EKWsInQ", type: "youtube", title: "Cinematic Reel 2024" },
     ],
     vlogs: [
-        { id: "tAGnKpE4NCI", type: "youtube", title: "Travel Vlog" },
+        {
+            id: "vlog1",
+            type: "instagram",
+            url: "https://www.instagram.com/reel/CyOxqB1tnqw/",
+            title: "Travel Vlog"
+        },
     ],
     songCovers: [
         { id: "3jWRrafhO7M", type: "youtube", title: "Acoustic Session" },
