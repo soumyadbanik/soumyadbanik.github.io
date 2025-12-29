@@ -172,8 +172,8 @@ const BeyondCode = () => {
                 </p>
 
                 <CreativeSection title="Photography" items={creativeData.photography} />
-                <CreativeSection title="Short Films" items={creativeData.shortFilms} />
-                <CreativeSection title="Vlogs" items={creativeData.vlogs} />
+                <CreativeSection title="Documentaries" items={creativeData.shortFilms} />
+                <CreativeSection title="Shorts" items={creativeData.vlogs} />
                 <CreativeSection title="Song Covers" items={creativeData.songCovers} />
                 <CreativeSection title="Sketches" items={creativeData.sketches} />
 
