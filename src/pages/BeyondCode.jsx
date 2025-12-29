@@ -55,7 +55,10 @@ const InstagramEmbed = ({ url, title }) => {
             background: 'white',
             height: '650px',
             display: 'flex',
-            justifyContent: 'center'
+            justifyContent: 'center',
+            transform: 'scale(0.85)',
+            transformOrigin: 'top center',
+            marginBottom: '-80px'
         }}>
             <iframe
                 src={`https://www.instagram.com/p/${postId}/embed`}
@@ -183,7 +186,7 @@ const BeyondCode = () => {
                     borderTop: '1px solid #333',
                     textAlign: 'center'
                 }}>
-                    <p style={{ marginBottom: '1.5rem', color: '#888', fontSize: '1.1rem' }}>See clips on my profiles</p>
+                    <p style={{ marginBottom: '1.5rem', color: '#888', fontSize: '1.1rem' }}>Find more on my profiles</p>
                     <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center' }}>
                         <a href="https://instagram.com/soumyadbanik" target="_blank" rel="noreferrer" style={{
                             color: 'var(--accent)',

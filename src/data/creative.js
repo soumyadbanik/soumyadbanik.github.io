@@ -3,20 +3,20 @@ export const creativeData = {
         {
             id: 1,
             type: "instagram",
-            url: "https://www.instagram.com/p/DR6yF7cjV2h/",
-            title: "Latest Shot"
+            url: "https://www.instagram.com/p/DFs_DA9TEgB/",
+            title: "Latest Shot1"
         },
         {
             id: 2,
             type: "instagram",
-            url: "https://www.instagram.com/p/DHQw3ZGPLKa/",
-            title: "Latest Shot"
+            url: "https://www.instagram.com/p/CxYayNzSjG7/?img_index=3",
+            title: "Latest Shot2"
         },
         {
             id: 3,
             type: "instagram",
             url: "https://www.instagram.com/p/DFlObFBzktI/",
-            title: "Latest Shot"
+            title: "Latest Shot3"
         }
     ],
     shortFilms: [
