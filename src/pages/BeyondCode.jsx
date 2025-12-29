@@ -107,50 +107,13 @@ const ImageCard = ({ url, title }) => (
 
 
 
-const InstagramGrid = ({ items }) => (
-    <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(3, 1fr)',
-        gap: '4px', // Tight gap like Instagram
-        maxWidth: '500px', // Restrict width to mimic profile view
-        margin: '0 auto' // Center it
-    }}>
-        {items.map((item) => (
-            <motion.a
-                key={item.id}
-                href={item.link}
-                target="_blank"
-                rel="noreferrer"
-                whileHover={{ opacity: 0.8 }}
-                style={{
-                    display: 'block',
-                    aspectRatio: '1/1',
-                    overflow: 'hidden',
-                    backgroundColor: '#111'
-                }}
-            >
-                <img
-                    src={item.url}
-                    alt="Instagram Post"
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                />
-            </motion.a>
-        ))}
-    </div>
-);
+
 
 const CreativeSection = ({ title, items }) => {
     if (!items || items.length === 0) return null;
 
     // Special layout for Photography (Insta Grid)
-    if (title === "Photography") {
-        return (
-            <section>
-                <SectionHeader title={title} />
-                <InstagramGrid items={items} />
-            </section>
-        );
-    }
+
 
     return (
         <section>

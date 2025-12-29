@@ -1,6 +1,11 @@
 export const creativeData = {
     photography: [
-        { id: 1, type: "instagram", url: "https://www.instagram.com/p/DFlObFBzktI/", title: "Instagram Feed" },
+        {
+            id: 1,
+            type: "image",
+            url: "/images/insta_grid.png",  // User should replace this single file
+            link: "https://instagram.com/soumyadbanik"
+        }
     ],
     shortFilms: [
         { id: "LXb3EKWsInQ", type: "youtube", title: "Cinematic Reel 2024" },
