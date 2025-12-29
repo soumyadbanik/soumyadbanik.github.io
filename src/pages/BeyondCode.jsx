@@ -170,9 +170,14 @@ const BeyondCode = () => {
                 }}>
                     Beyond Code
                 </h1>
-                <p style={{ maxWidth: '600px', marginBottom: '4rem', color: 'var(--text-secondary)', fontSize: '1.2rem' }}>
-                    Exploring the world through lenses, melodies, and colors.
-                </p>
+                <div style={{ maxWidth: '800px', marginBottom: '4rem', color: 'var(--text-secondary)', fontSize: '1.2rem', lineHeight: '1.8' }}>
+                    <p style={{ marginBottom: '1.5rem' }}>
+                        Beyond the architecture of deep learning models, I navigate the world through <span style={{ color: 'var(--accent)', fontWeight: '500' }}>lenses, melodies, and sketches</span>. My journey into Computer Vision was natural rather than accidental; my early fascination with photography and filmmaking gave me an intuitive grasp of optics and camera intrinsics—concepts that are now central to my research.
+                    </p>
+                    <p>
+                        During graduate school, I expanded this creative expression into performing arts, including theatre and music. Whether composing a shot or training a model, I am driven by a desire to capture and understand perception. Here is a glimpse of my world beyond the algorithms.
+                    </p>
+                </div>
 
                 <CreativeSection title="Photography" items={creativeData.photography} />
                 <CreativeSection title="Documentaries" items={creativeData.shortFilms} />
