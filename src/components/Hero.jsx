@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { resumeData } from '../data/resume';
 import { ArrowDown } from 'lucide-react';
 
+import profilePic from '../assets/soumyadbanik.png';
+
 const Hero = () => {
     return (
         <section id="about" style={{
@@ -27,78 +29,115 @@ const Hero = () => {
                 zIndex: -1
             }} />
 
-            <div className="container" style={{ maxWidth: '1000px', textAlign: 'left', zIndex: 1 }}>
-                <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.2 }}
-                    style={{ color: 'var(--accent)', fontSize: '1.2rem', marginBottom: '1rem', fontWeight: 500 }}
-                >
-                    Hello, I am
-                </motion.p>
+            <div className="container" style={{
+                maxWidth: '1200px',
+                zIndex: 1,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                flexWrap: 'wrap',
+                gap: '4rem'
+            }}>
+                <div style={{ flex: '1 1 500px', textAlign: 'left' }}>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.2 }}
+                        style={{ color: 'var(--accent)', fontSize: '1.2rem', marginBottom: '1rem', fontWeight: 500 }}
+                    >
+                        Hello, I am
+                    </motion.p>
 
-                <motion.h1
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.3 }}
-                    style={{
-                        fontSize: 'clamp(3rem, 8vw, 6rem)',
-                        fontWeight: 700,
-                        lineHeight: 1,
-                        marginBottom: '1rem',
-                        background: 'linear-gradient(to right, #fff, #999)',
-                        WebkitBackgroundClip: 'text',
-                        WebkitTextFillColor: 'transparent'
-                    }}
-                >
-                    {resumeData.personalInfo.name}.
-                </motion.h1>
+                    <motion.h1
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.3 }}
+                        style={{
+                            fontSize: 'clamp(3rem, 8vw, 6rem)',
+                            fontWeight: 700,
+                            lineHeight: 1,
+                            marginBottom: '1rem',
+                            background: 'linear-gradient(to right, #fff, #999)',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent'
+                        }}
+                    >
+                        {resumeData.personalInfo.name}.
+                    </motion.h1>
 
-                <motion.h2
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.4 }}
-                    style={{ fontSize: 'clamp(1.5rem, 4vw, 3rem)', color: 'var(--text-secondary)', marginBottom: '2rem' }}
-                >
-                    {resumeData.personalInfo.title}
-                </motion.h2>
+                    <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.4 }}
+                        style={{ fontSize: 'clamp(1.5rem, 4vw, 3rem)', color: 'var(--text-secondary)', marginBottom: '2rem' }}
+                    >
+                        {resumeData.personalInfo.title}
+                    </motion.h2>
 
-                <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.5 }}
-                    style={{ maxWidth: '600px', fontSize: '1.1rem', color: '#ccc', marginBottom: '3rem', lineHeight: 1.8 }}
-                >
-                    {resumeData.personalInfo.about}
-                </motion.p>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.5 }}
+                        style={{ maxWidth: '600px', fontSize: '1.1rem', color: '#ccc', marginBottom: '3rem', lineHeight: 1.8 }}
+                    >
+                        {resumeData.personalInfo.about}
+                    </motion.p>
 
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.6 }}
+                        style={{ display: 'flex', gap: '1.5rem' }}
+                    >
+                        <a href={resumeData.personalInfo.linkedin} target="_blank" rel="noopener noreferrer"
+                            style={{
+                                padding: '0.8rem 2rem',
+                                border: '1px solid var(--accent)',
+                                color: 'var(--accent)',
+                                borderRadius: '4px',
+                                fontWeight: 500
+                            }}>
+                            LinkedIn
+                        </a>
+                        <a href={resumeData.personalInfo.github} target="_blank" rel="noopener noreferrer"
+                            style={{
+                                padding: '0.8rem 2rem',
+                                backgroundColor: 'var(--text-primary)',
+                                color: 'var(--bg-color)',
+                                borderRadius: '4px',
+                                fontWeight: 600,
+                                border: '1px solid white'
+                            }}>
+                            GitHub
+                        </a>
+                    </motion.div>
+                </div>
+
+                {/* Profile Image */}
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.6 }}
-                    style={{ display: 'flex', gap: '1.5rem' }}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.4, duration: 0.6 }}
+                    style={{ flex: '0 0 auto' }}
                 >
-                    <a href={resumeData.personalInfo.linkedin} target="_blank" rel="noopener noreferrer"
-                        style={{
-                            padding: '0.8rem 2rem',
-                            border: '1px solid var(--accent)',
-                            color: 'var(--accent)',
-                            borderRadius: '4px',
-                            fontWeight: 500
-                        }}>
-                        LinkedIn
-                    </a>
-                    <a href={resumeData.personalInfo.github} target="_blank" rel="noopener noreferrer"
-                        style={{
-                            padding: '0.8rem 2rem',
-                            backgroundColor: 'var(--text-primary)',
-                            color: 'var(--bg-color)',
-                            borderRadius: '4px',
-                            fontWeight: 600,
-                            border: '1px solid white'
-                        }}>
-                        GitHub
-                    </a>
+                    <div style={{
+                        width: '350px',
+                        height: '350px',
+                        borderRadius: '50%',
+                        overflow: 'hidden',
+                        border: '4px solid var(--accent)',
+                        boxShadow: '0 0 20px rgba(59,130,246,0.3)'
+                    }}>
+                        <img
+                            src={profilePic}
+                            alt={resumeData.personalInfo.name}
+                            style={{
+                                width: '100%',
+                                height: '100%',
+                                objectFit: 'cover'
+                            }}
+                        />
+                    </div>
                 </motion.div>
             </div>
 
