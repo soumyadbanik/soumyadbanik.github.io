@@ -71,7 +71,7 @@ const CustomCursor = () => {
                     y: position.y - 8,
                     width: '16px',
                     height: '16px',
-                    backgroundColor: '#fff',
+                    backgroundColor: 'var(--text-primary)',
                     borderRadius: '50%',
                     opacity: hidden ? 0 : 1,
                 }}
@@ -82,7 +82,7 @@ const CustomCursor = () => {
                     scale: clicked ? 0.8 : linkHovered ? 1.5 : 1,
                     opacity: hidden ? 0 : 1,
                     backgroundColor: linkHovered ? 'var(--accent)' : 'transparent',
-                    border: linkHovered ? 'none' : '1px solid #fff'
+                    border: linkHovered ? 'none' : '1px solid var(--text-primary)'
                 }}
                 transition={{
                     scale: { duration: 0.15 },

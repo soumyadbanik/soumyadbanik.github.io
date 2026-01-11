@@ -7,7 +7,7 @@ const CreativeItem = ({ type, title, color }) => (
         whileHover={{ scale: 1.05, zIndex: 10 }}
         style={{
             aspectRatio: '1',
-            backgroundColor: color || '#222',
+            backgroundColor: color || 'var(--card-bg)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -25,7 +25,7 @@ const CreativeItem = ({ type, title, color }) => (
             alignItems: 'center',
             justifyContent: 'center',
             background: 'rgba(0,0,0,0.3)',
-            color: '#fff',
+            color: 'var(--text-primary)',
             opacity: 0,
             transition: 'opacity 0.3s'
         }}
@@ -56,12 +56,12 @@ const ExtraCurricular = () => {
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', maxWidth: '800px', margin: '0 auto' }}>
                 {/* Mock Grid */}
-                <CreativeItem type="photo" title="Photography" color="#2a2a2a" />
-                <CreativeItem type="video" title="Cinematography" color="#333" />
-                <CreativeItem type="photo" title="Art" color="#2a2a2a" />
-                <CreativeItem type="video" title="Covers" color="#333" />
-                <CreativeItem type="photo" title="Travel" color="#2a2a2a" />
-                <CreativeItem type="photo" title="Theatre" color="#333" />
+                <CreativeItem type="photo" title="Photography" color="var(--card-bg)" />
+                <CreativeItem type="video" title="Cinematography" color="var(--card-border)" />
+                <CreativeItem type="photo" title="Art" color="var(--card-bg)" />
+                <CreativeItem type="video" title="Covers" color="var(--card-border)" />
+                <CreativeItem type="photo" title="Travel" color="var(--card-bg)" />
+                <CreativeItem type="photo" title="Theatre" color="var(--card-border)" />
             </div>
 
             <div style={{ textAlign: 'center', marginTop: '3rem' }}>

@@ -1,7 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { creativeData } from '../data/creative';
-import { Play, Instagram, Image as ImageIcon } from 'lucide-react';
+import { Play, Instagram, Image as ImageIcon, ChevronRight } from 'lucide-react';
+import SketchGallery from '../components/SketchGallery';
 
 const SectionHeader = ({ title }) => (
     <motion.h2
@@ -13,7 +15,7 @@ const SectionHeader = ({ title }) => (
             margin: '4rem 0 2rem',
             borderLeft: '4px solid var(--accent)',
             paddingLeft: '1rem',
-            color: '#fff'
+            color: 'var(--text-primary)'
         }}
     >
         {title}
@@ -163,10 +165,10 @@ const BeyondCode = () => {
                 <h1 style={{
                     fontSize: '4rem',
                     marginBottom: '1rem',
-                    background: 'linear-gradient(to right, #fff, var(--accent))',
+                    background: 'var(--gradient-text)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
-                    lineHeight: 1.1
+                    lineHeight: 1.3
                 }}>
                     Beyond Code
                 </h1>
@@ -183,15 +185,68 @@ const BeyondCode = () => {
                 <CreativeSection title="Documentaries" items={creativeData.shortFilms} />
                 <CreativeSection title="Shorts" items={creativeData.vlogs} />
                 <CreativeSection title="Song Covers" items={creativeData.songCovers} />
-                <CreativeSection title="Sketches" items={creativeData.sketches} />
+                {/* Sketches Section with custom gallery */}
+                <section>
+                    <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        style={{ margin: '4rem 0 2rem' }}
+                    >
+                        <Link
+                            to="/sketches"
+                            style={{
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                gap: '0.75rem',
+                                fontSize: '2rem',
+                                fontWeight: '700',
+                                fontFamily: 'var(--font-heading)',
+                                borderLeft: '4px solid var(--accent)',
+                                paddingLeft: '1rem',
+                                color: 'var(--text-primary)',
+                                textDecoration: 'none',
+                            }}
+                        >
+                            Sketches
+                            <span
+                                style={{
+                                    display: 'inline-flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    width: '32px',
+                                    height: '32px',
+                                    borderRadius: '50%',
+                                    border: '2px solid var(--accent)',
+                                    color: 'var(--accent)',
+                                    transition: 'all 0.3s ease',
+                                    backgroundColor: 'transparent'
+                                }}
+                                onMouseEnter={(e) => {
+                                    e.currentTarget.style.backgroundColor = 'var(--accent)';
+                                    e.currentTarget.style.color = '#fff';
+                                    e.currentTarget.style.boxShadow = '0 0 15px var(--accent-glow)';
+                                }}
+                                onMouseLeave={(e) => {
+                                    e.currentTarget.style.backgroundColor = 'transparent';
+                                    e.currentTarget.style.color = 'var(--accent)';
+                                    e.currentTarget.style.boxShadow = 'none';
+                                }}
+                            >
+                                <ChevronRight size={18} />
+                            </span>
+                        </Link>
+                    </motion.div>
+                    <SketchGallery sketches={creativeData.sketches} hideViewMore />
+                </section>
 
                 <div style={{
                     marginTop: '6rem',
                     paddingTop: '3rem',
-                    borderTop: '1px solid #333',
+                    borderTop: '1px solid var(--card-border)',
                     textAlign: 'center'
                 }}>
-                    <p style={{ marginBottom: '1.5rem', color: '#888', fontSize: '1.1rem' }}>Find more on my profiles</p>
+                    <p style={{ marginBottom: '1.5rem', color: 'var(--text-secondary)', fontSize: '1.1rem' }}>Find more on my profiles</p>
                     <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center' }}>
                         <a href="https://instagram.com/soumyadbanik" target="_blank" rel="noreferrer" style={{
                             color: 'var(--accent)',

@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import ScrollProgress from './components/ScrollProgress';
 import Home from './pages/Home';
 import BeyondCode from './pages/BeyondCode';
+import SketchesPage from './pages/SketchesPage';
 
 // ScrollToTop component to ensure pages start at top on navigation
 const ScrollToTop = () => {
@@ -34,6 +35,7 @@ function App() {
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/beyond-code" element={<BeyondCode />} />
+                        <Route path="/sketches" element={<SketchesPage />} />
                     </Routes>
                 </main>
 
