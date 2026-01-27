@@ -54,12 +54,12 @@ const TechnicalReports = () => {
                             <FileText size={20} color="var(--exp-reports-accent)" />
                         </div>
                         <div style={{ flex: 1 }}>
-                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.25rem' }}>
-                                <h3 style={{ fontSize: '0.95rem', color: 'var(--text-primary)', fontWeight: 600, margin: 0 }}>
+                            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.25rem', gap: '0.5rem' }}>
+                                <h3 style={{ fontSize: '0.95rem', color: 'var(--text-primary)', fontWeight: 600, margin: 0, wordBreak: 'break-word', flex: '1 1 auto', minWidth: 0 }}>
                                     {report.title}
                                 </h3>
                                 {report.period && (
-                                    <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', whiteSpace: 'nowrap', marginLeft: '1rem' }}>
+                                    <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', whiteSpace: 'nowrap', flexShrink: 0 }}>
                                         {report.period}
                                     </span>
                                 )}
