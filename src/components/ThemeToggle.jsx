@@ -34,6 +34,7 @@ const ThemeToggle = ({ style = {} }) => {
         >
             <motion.div
                 initial={false}
+                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                 animate={{
                     rotate: isDark ? 0 : 180,
                     scale: 1
@@ -44,7 +45,8 @@ const ThemeToggle = ({ style = {} }) => {
                     damping: 15
                 }}
             >
-                {isDark ? <Moon size={18} /> : <Sun size={18} />}
+                {isDark ? <Sun size={18} /> : <Moon size={18} />}
+                {/* {islightmode ? <Moon size={18} /> : <Sun size={18} />} */}
             </motion.div>
         </motion.button>
     );

@@ -20,22 +20,19 @@ const MethodsAndTools = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 style={{
-                    fontSize: '2rem',
-                    marginBottom: '3rem',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '1rem'
+                    fontSize: '1.75rem',
+                    fontWeight: 600,
+                    marginBottom: '2rem',
+                    color: 'var(--text-primary)'
                 }}
             >
-                <span style={{ color: 'var(--accent)', fontSize: '1.2rem', fontFamily: 'monospace' }}>07.</span>
                 Methods & Tools
             </motion.h2>
 
             <div style={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-                gap: '2.5rem',
-                maxWidth: '900px'
+                gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+                gap: '1rem'
             }}>
                 {sections.map(({ title, items, highlight }, index) => (
                     <motion.div
@@ -44,40 +41,34 @@ const MethodsAndTools = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: index * 0.05 }}
+                        style={{
+                            padding: '1.25rem',
+                            background: highlight ? 'var(--exp-skills-bg)' : 'var(--card-bg)',
+                            border: `1px solid ${highlight ? 'var(--exp-skills-border)' : 'var(--card-border)'}`,
+                            borderRadius: '12px'
+                        }}
                     >
                         <h3 style={{
-                            fontSize: '0.85rem',
-                            marginBottom: '1rem',
-                            color: highlight ? 'var(--accent)' : 'var(--text-secondary)',
+                            fontSize: '0.8rem',
+                            marginBottom: '0.75rem',
+                            color: highlight ? 'var(--exp-skills-accent)' : 'var(--text-secondary)',
                             textTransform: 'uppercase',
-                            letterSpacing: '0.08em',
-                            fontWeight: 500
+                            letterSpacing: '0.05em',
+                            fontWeight: 600
                         }}>
                             {title}
                         </h3>
-                        <ul style={{ listStyle: 'none', padding: 0 }}>
-                            {items.map((item, i) => (
-                                <li key={item} style={{
-                                    marginBottom: '0.5rem',
-                                    paddingLeft: '1rem',
-                                    position: 'relative',
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                            {items.map((item) => (
+                                <span key={item} style={{
                                     color: highlight ? 'var(--text-primary)' : 'var(--text-secondary)',
-                                    fontSize: '0.9rem',
-                                    lineHeight: 1.5
+                                    fontSize: '0.85rem',
+                                    lineHeight: 1.4
                                 }}>
-                                    <span style={{
-                                        position: 'absolute',
-                                        left: 0,
-                                        top: '0.55em',
-                                        width: '4px',
-                                        height: '4px',
-                                        backgroundColor: highlight ? 'var(--accent)' : 'var(--text-muted)',
-                                        borderRadius: '50%'
-                                    }}></span>
                                     {item}
-                                </li>
+                                </span>
                             ))}
-                        </ul>
+                        </div>
                     </motion.div>
                 ))}
             </div>

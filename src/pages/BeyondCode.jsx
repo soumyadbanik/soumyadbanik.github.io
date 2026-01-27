@@ -164,7 +164,7 @@ const BeyondCode = () => {
             >
                 <h1 style={{
                     fontSize: '4rem',
-                    marginBottom: '1rem',
+                    marginBottom: '2rem',
                     background: 'var(--gradient-text)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
@@ -173,18 +173,44 @@ const BeyondCode = () => {
                     Beyond Code
                 </h1>
                 <div style={{ maxWidth: '800px', marginBottom: '4rem', color: 'var(--text-secondary)', fontSize: '1.2rem', lineHeight: '1.8' }}>
+
+                    <blockquote style={{
+                        margin: '2rem 0',
+                        padding: '2rem',
+                        background: 'var(--card-bg)',
+                        borderLeft: '4px solid var(--accent)',
+                        borderRadius: '0 12px 12px 0',
+                        fontFamily: 'Georgia, serif',
+                        fontStyle: 'italic',
+                        fontSize: '1.5rem',
+                        lineHeight: '1.6',
+                        color: 'var(--text-primary)',
+                        boxShadow: '0 4px 20px rgba(0,0,0,0.1)'
+                    }}>
+                        " The e<span style={{ color: 'var(--accent)', fontWeight: 'bold' }}>ART</span>h without <span style={{ color: 'var(--accent)', fontWeight: 'bold' }}>ART</span> is just 'eh'."
+                        <footer style={{
+                            marginTop: '1rem',
+                            fontSize: '1rem',
+                            fontFamily: 'var(--font-body)',
+                            fontStyle: 'normal',
+                            color: 'var(--text-secondary)',
+                            fontWeight: '500',
+                            textAlign: 'right'
+                        }}>
+                            — Demetri Martin
+                        </footer>
+                    </blockquote>
+
                     <p style={{ marginBottom: '1.5rem' }}>
-                        Beyond the architecture of deep learning models, I navigate the world through <span style={{ color: 'var(--accent)', fontWeight: '500' }}>lenses, melodies, and sketches</span>. My journey into Computer Vision was natural rather than accidental; my early fascination with photography and filmmaking gave me an intuitive grasp of optics and camera intrinsics—concepts that are now central to my research.
+                        Beyond algorithms and deep learning models, I perceive the world through <span style={{ color: 'var(--accent)', fontWeight: '500' }}>lenses, melodies, and sketches</span>. I started using a camera in high school, after my father bought me one in eighth grade.
                     </p>
                     <p>
-                        During graduate school, I expanded this creative expression into performing arts, including theatre and music. Whether composing a shot or training a model, I am driven by a desire to capture and understand perception. Here is a glimpse of my world beyond the algorithms.
+                        The interest later flowed into Computer Vision.
+                        During grad school, curiosity took over and I started exploring more Art forms. From doing art decos, graphic design e.g. desiging posters, banners for departmental events to performing arts, including theatre and music.
+                        I'm still learning. Here are some glimpses of how I interpret the world.
                     </p>
                 </div>
 
-                <CreativeSection title="Photography" items={creativeData.photography} />
-                <CreativeSection title="Documentaries" items={creativeData.shortFilms} />
-                <CreativeSection title="Shorts" items={creativeData.vlogs} />
-                <CreativeSection title="Song Covers" items={creativeData.songCovers} />
                 {/* Sketches Section with custom gallery */}
                 <section>
                     <motion.div
@@ -239,6 +265,11 @@ const BeyondCode = () => {
                     </motion.div>
                     <SketchGallery sketches={creativeData.sketches} hideViewMore />
                 </section>
+
+                <CreativeSection title="Photography" items={creativeData.photography} />
+                <CreativeSection title="Documentaries" items={creativeData.shortFilms} />
+                <CreativeSection title="Shorts" items={creativeData.vlogs} />
+                <CreativeSection title="Song Covers" items={creativeData.songCovers} />
 
                 <div style={{
                     marginTop: '6rem',

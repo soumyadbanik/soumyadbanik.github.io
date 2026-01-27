@@ -6,7 +6,7 @@ import IndustryExperience from '../components/IndustryExperience';
 import Projects from '../components/Projects';
 import TechnicalReports from '../components/TechnicalReports';
 import Education from '../components/Education';
-import MethodsAndTools from '../components/MethodsAndTools';
+import Skills from '../components/Skills';
 
 const Home = () => {
     return (
@@ -17,8 +17,8 @@ const Home = () => {
             <IndustryExperience />
             <Projects />
             <TechnicalReports />
+            <Skills />
             <Education />
-            <MethodsAndTools />
         </div>
     );
 };

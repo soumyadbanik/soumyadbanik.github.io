@@ -45,7 +45,7 @@ const Navbar = () => {
         { name: 'Experience', href: '#industry-experience', isHash: true },
         { name: 'Projects', href: '#projects', isHash: true },
         { name: 'Education', href: '#education', isHash: true },
-        { name: 'Beyond Research', href: '/beyond-code', isHash: false },
+        { name: 'Beyond Code', href: '/beyond-code', isHash: false },
     ];
 
     // Normal navbar (top, before scroll)

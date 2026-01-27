@@ -1,7 +1,7 @@
 export const resumeData = {
     personalInfo: {
         name: "Soumyadeep Banik",
-        title: "Computer Vision Engineer | Aspiring PhD Researcher",
+        title: "Computer Vision Engineer",
         email: "soumya.d.banik@gmail.com",
         github: "https://github.com/soumyadbanik",
         linkedin: "https://www.linkedin.com/in/soumya-d-banik",
@@ -23,44 +23,85 @@ export const resumeData = {
     researchExperience: [
         {
             institution: "Indian Statistical Institute",
-            role: "Project-Linked Junior Research Fellow",
-            period: "October 2021 – November 2022",
             location: "Kolkata, India",
-            project: "Distributed Cognitive System for Healthcare Monitoring",
-            description: "Contributed to a distributed cognitive system for healthcare monitoring, focusing on vision-based activity recognition from RGB and skeletal data.",
-            contributions: [
-                "Investigated graph-based representations for human skeleton data to recognize abnormal activities (falls, coughing) in healthcare settings",
-                "Developed activity recognition pipelines using spatio-temporal modeling on RGB video and pose sequences",
-                "Explored graph neural network architectures for skeleton-based action recognition, focusing on temporal dynamics and spatial relationships",
-                "Collaborated with interdisciplinary team on system design and evaluation protocols"
+            roles: [
+                {
+                    role: "Project-Linked Junior Research Fellow",
+                    period: "October 2021 – November 2022",
+                    project: "Distributed Cognitive System for Healthcare Monitoring",
+                    description: "Contributed to a distributed cognitive system for healthcare monitoring, focusing on vision-based activity recognition from RGB and skeletal data.",
+                    contributions: [
+                        "Investigated graph-based representations for human skeleton data to recognize abnormal activities (falls, coughing) in healthcare settings",
+                        "Developed activity recognition pipelines using spatio-temporal modeling on RGB video and pose sequences",
+                        "Explored graph neural network architectures for skeleton-based action recognition, focusing on temporal dynamics and spatial relationships",
+                        "Collaborated with interdisciplinary team on system design and evaluation protocols"
+                    ]
+                },
+                {
+                    role: "Teaching Assistant",
+                    period: "January 2022 – October 2022",
+                    contributions: [
+                        "Machine Learning I",
+                    ]
+                },
+                {
+                    role: "Teaching Assistant",
+                    period: "January 2022 – April 2022",
+                    contributions: [
+                        "M.Tech CS, Advance Image Processing",
+                    ],
+                    link: "https://docs.google.com/presentation/d/1T7tK6g_ol-zjFhTIGDfF5DXI_b8DviVseTPoGZGOXdw/edit?usp=sharing"
+                }
             ]
         }
     ],
     industryExperience: [
         {
+            company: "AI LENS",
+            roles: [
+                {
+                    role: "Computer Vision Developer(Freelance)",
+                    period: "Jan 2024 – Present",
+                    location: "Remote",
+                    description: "Building a virtual specs try-on platform and recommendation system ( In collaboration with [AI LENS](https://www.ailens.ai/) )",
+                    contributions: [
+                        " Implemented the algorithm to project the chosen specs onto the user’s face using facial keypoint features, accommodating various facial orientations."
+                    ]
+                }
+            ]
+        },
+        {
             company: "Quidich Innovation Labs",
-            role: "Computer Vision Engineer",
-            period: "April 2024 – Present",
-            location: "Mumbai, India",
-            description: "Developing real-time computer vision systems for sports broadcasting, including decision review systems and 3D player reconstruction.",
-            contributions: [
-                "Designed and deployed automated decision review systems for cricket (no-ball, run-out detection) using high-speed cameras (100-120 fps), addressing challenges in motion blur and temporal precision",
-                "Developed ground-plane tracking algorithms for real-time virtual graphics overlay (50 fps), involving homography estimation and camera calibration",
-                "Built multi-camera 3D pose reconstruction pipeline achieving 90% accuracy, integrating temporal consistency constraints and geometric validation for Unreal Engine integration",
-                "Optimized inference pipelines for real-time performance under strict latency constraints in live broadcast scenarios"
+            roles: [
+                {
+                    role: "Computer Vision Engineer",
+                    period: "April 2024 – Present",
+                    location: "Mumbai, India",
+                    description: "Developing real-time computer vision systems for sports broadcasting, including decision review systems and 3D player reconstruction.",
+                    contributions: [
+                        "Responsible for automated Decision Review Systems(DRS) for cricket (no-ball, run-out detection) using high-speed cameras (100-120 fps), addressing challenges in motion blur and temporal precision",
+                        "Developed ground-plane tracking algorithms for real-time virtual graphics overlay (50 fps), involving homography estimation and camera calibration",
+                        "Built multi-camera 3D pose reconstruction pipeline achieving 90% accuracy, integrating temporal consistency constraints and geometric validation for Unreal Engine integration",
+                        "Optimized inference pipelines for real-time performance under strict latency constraints in live broadcast scenarios"
+                    ]
+                }
             ]
         },
         {
             company: "HappyMonk.ai",
-            role: "Junior Data Scientist",
-            period: "December 2022 – January 2024",
-            location: "Bangalore, India",
-            description: "Developed edge-deployed computer vision models for video surveillance and spatial analytics applications.",
-            contributions: [
-                "Led development of human activity recognition system using SlowFast networks, investigating spatio-temporal feature learning for action classification",
-                "Designed space utilization algorithms for inventory monitoring, formulating the problem as occupancy estimation from overhead video",
-                "Implemented and optimized object detection models (YOLO v5, v8) for face detection, crowd counting, and fire-smoke detection on edge devices",
-                "Addressed deployment constraints including model compression, quantization, and inference optimization for resource-limited hardware"
+            roles: [
+                {
+                    role: "Junior Data Scientist",
+                    period: "December 2022 – January 2024",
+                    location: "Bangalore, India",
+                    description: "Developed edge-deployed computer vision models for video surveillance and spatial analytics applications.",
+                    contributions: [
+                        "Led development of human activity recognition system using SlowFast networks, investigating spatio-temporal feature learning for action classification",
+                        "Designed space utilization algorithms for inventory monitoring, formulating the problem as occupancy estimation from overhead video",
+                        "Implemented and optimized object detection models (YOLO v5, v8) for face detection, crowd counting, and fire-smoke detection on edge devices",
+                        "Addressed deployment constraints including model compression, quantization, and inference optimization for resource-limited hardware"
+                    ]
+                }
             ]
         }
     ],
@@ -84,46 +125,105 @@ export const resumeData = {
         {
             title: "Virtual Eyewear Try-on System",
             period: "January 2024 - Present",
-            description: "Developed a real-time virtual eyewear try-on system using facial landmark detection and geometric transformation. Implemented face shape analysis for personalized recommendations. Investigated challenges in perspective-correct rendering and occlusion handling.",
+            description: "Developed a real-time virtual eyewear try-on system using facial landmark detection and geometric transformation. Implementing face shape analysis for personalized recommendations. Investigating challenges in perspective-correct rendering and occlusion handling.",
             tech: ["Python", "MediaPipe", "OpenCV", "Streamlit", "AWS Lambda"],
-            link: null,
-            researchAspects: ["Facial geometry estimation", "Real-time rendering", "Recommendation systems"]
+            links: [
+                {
+                    url: "https://www.spectsgenie.com/product/3289/2",
+                    type: "website",
+                    label: "Try it"
+                }
+            ],
+            researchAspects: ["Facial geometry estimation", "Real-time rendering", "Recommendation systems"],
+            // Add your image/gif: "/images/projects/eyewear-tryon.gif"
+            thumbnail: "/images/projects/spectsgenie.png"
         },
         {
             title: "Social Distancing Monitoring in Aerial Videos",
             period: "May 2021 - July 2021",
             description: "Designed a multi-object tracking system for monitoring social distancing compliance in drone footage. Addressed challenges in scale variation, occlusion, and perspective distortion in aerial views. Evaluated on Stanford Drone Dataset.",
             tech: ["Deep SORT", "YOLO-V4", "Flask", "TensorFlow"],
-            link: "https://github.com/soumyadbanik/Safe-Distance-Monitoring-APP",
-            researchAspects: ["Multi-object tracking", "Aerial view analysis", "Distance estimation"]
+            links: [
+                {
+                    url: "https://github.com/soumyadbanik/Safe-Distance-Monitoring-APP",
+                    type: "github"
+                }
+            ],
+            researchAspects: ["Multi-object tracking", "Aerial view analysis", "Distance estimation"],
+            // Add your image/gif: "/images/projects/social-distancing.gif"
+            thumbnail: "/images/projects/hyang_social_short.webm"
         },
         {
             title: "Quadtree-based Spatial Attention for CNNs",
             period: "October 2020 - December 2020",
             description: "Proposed a quadtree-based spatial attention mechanism to reduce computational complexity in CNNs. Achieved complexity reduction from O(M²N²C) to O(M²NC) while preserving salient region focus. Explored trade-offs between efficiency and accuracy.",
             tech: ["PyTorch", "Python"],
-            link: "https://github.com/soumyadbanik/Quadtree-Image-saliency-mapping",
-            researchAspects: ["Spatial attention", "Computational efficiency", "Saliency detection"]
+            links: [
+                {
+                    url: "https://github.com/soumyadbanik/Quadtree-Image-saliency-mapping",
+                    type: "github"
+                }
+            ],
+            researchAspects: ["Spatial attention", "Computational efficiency", "Saliency detection"],
+            // Add your image/gif: "/images/projects/quadtree-attention.png"
+            thumbnail: "/images/projects/quadtree.png"
         },
         {
             title: "Video Steganography with Frame Selection",
             period: "March 2019 - May 2019",
             description: "Implemented LSB-based video steganography with a novel frame selection method using Linear Congruential Generators. Investigated imperceptibility and capacity trade-offs in video-based information hiding.",
             tech: ["OpenCV", "NumPy", "Pandas"],
-            link: "https://github.com/soumyadbanik/video_steganography",
-            researchAspects: ["Information hiding", "Frame selection algorithms", "Security analysis"]
+            links: [
+                {
+                    url: "https://github.com/soumyadbanik/video_steganography",
+                    type: "github"
+                }
+            ],
+            researchAspects: ["Information hiding", "Frame selection algorithms", "Security analysis"],
+            // Add your image/gif: "/images/projects/steganography.png"
+            thumbnail: "/images/projects/stego.png"
         }
     ],
     technicalReports: [
         {
-            title: "Real-time 3D Pose Reconstruction for Sports Broadcasting",
-            status: "In Preparation",
-            description: "Documenting multi-camera calibration and temporal consistency methods developed at Quidich Innovation Labs for 3D player reconstruction in live sports broadcasts."
+            title: "Human Skeleton Based Activity Recognition/Prediction",
+            status: "Project",
+            period: "October 2021 - September 2022",
+            description: "A survey on human skeleton-based activity recognition and prediction, focusing on methods that progress from traditional computer vision to advanced techniques like Two-Stream Networks, Optical Flow, and Spatial Temporal Graph Convolutional Neural Networks (ST-GCNNs) for monitoring abnormalities in elderly people using video sensors.",
+            links: [
+                {
+                    label: "Slides",
+                    url: "https://docs.google.com/presentation/d/1-o_CdqgmmVh1_5lMaCsalqWUCwjXlP--ABLxiMIP2wg/edit?usp=sharing"
+                }
+            ]
         },
         {
-            title: "Edge-Optimized Activity Recognition Systems",
-            status: "In Preparation",
-            description: "Analysis of deployment strategies for spatio-temporal models on resource-constrained devices, based on work at HappyMonk.ai."
+            title: "Surveying Social Distancing in Aerial Drone Videos",
+            status: "Thesis Project",
+            period: "May 2021 - July 2021",
+            description: "A comparative study between traditional MOT methods and SOTA object detection and tracking methods (e.g., YOLOv4 and Deep SORT) for social distancing monitoring in aerial drone videos.",
+            links: [
+                {
+                    label: "Thesis Report",
+                    url: "https://drive.google.com/file/d/1T6KgwVS5qZ_5baK53xH7IHpefNW-3cVM/view?usp=sharing"
+                },
+                {
+                    label: "Slides",
+                    url: "https://docs.google.com/presentation/d/1IGtcHEopTI3RaLDRwxQGYA-XjanRLYoY4K2u6hszFt8/edit?usp=sharing"
+                }
+            ]
+        },
+        {
+            title: "Video Steganography using LSB Technique by Unique Frame Selection Method to Increase Security",
+            status: "Thesis",
+            period: "March 2019 - May 2019",
+            description: "Proposed an approach for LSB-based video steganography with a novel frame selection method using Linear Congruential Generators to enhance security and imperceptibility.",
+            links: [
+                {
+                    label: "Thesis Report",
+                    url: "https://docs.google.com/document/d/16bjE0pG6jvcLOxRWXuXN9kMBaE1qGPSr/edit?usp=sharing&ouid=110193751286312594531&rtpof=true&sd=true"
+                }
+            ]
         }
     ],
     methodsAndTools: {

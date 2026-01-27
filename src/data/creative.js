@@ -53,14 +53,14 @@ export const creativeData = {
             id: 2,
             type: "image",
             url: "/images/sketches/Parents_Anniversary.jpeg",
-            title: "Parent's 27th Anniversary",
+            title: "Parent's 27th Anniversary doodle",
             // description: "Add your story here."
         },
         {
             id: 3,
             type: "image",
             url: "/images/sketches/Mumbai_heritage_walk.jpeg",
-            title: "Mumbai Heritage Walk",
+            title: "Mumbai Heritage Walk with urban sketchers at various art decos",
             // description: "Add your story here."
         },
         {
