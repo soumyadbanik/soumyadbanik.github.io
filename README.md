@@ -10,11 +10,10 @@ A responsive portfolio website built with React and Vite. Designed for developer
 
 ## 🚀 Features
 
-- **Fully Responsive** - Flawless on every device.
+- **Fully Responsive**
 - **Theme Support** - Auto-switching dark & light modes.
-- **Smooth Animations** - polished interactions out of the box.
-- **Easy Updates** - Edit JSON files, not complex code.
-- **Zero-Config Deployment** - Auto-deploys to GitHub Pages.
+- **Easy Updates** - Edit JSON files, with simple steps.
+- **Zero-Config Deployment** - CI/CD pipeline for auto-deploys to GitHub Pages.
 
 ---
 
