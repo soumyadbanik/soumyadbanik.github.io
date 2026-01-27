@@ -4,6 +4,8 @@ A responsive portfolio website built with React and Vite. Designed for developer
 
 **[Live Demo](https://soumyadbanik.github.io/)**
 
+![Portfolio Preview](public/images/preview.png)
+
 ---
 
 ## 🚀 Features
