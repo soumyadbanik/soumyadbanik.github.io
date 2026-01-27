@@ -75,7 +75,7 @@ export const resumeData = {
             roles: [
                 {
                     role: "Computer Vision Engineer",
-                    period: "April 2024 – Present",
+                    period: "March 2024 – Present",
                     location: "Mumbai, India",
                     description: "Developing real-time computer vision systems for sports broadcasting, including decision review systems and 3D player reconstruction.",
                     contributions: [
