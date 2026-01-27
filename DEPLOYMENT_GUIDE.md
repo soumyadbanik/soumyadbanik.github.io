@@ -1,61 +1,73 @@
-# Portfolio Website Setup & Deployment Guide
+# Portfolio Website
 
-This guide will help you launch your new "exclusive" researcher portfolio.
+A modern, responsive portfolio website built with React and Vite, featuring smooth animations and a clean design.
 
-## 1. Prerequisites
-Ensure you have **Node.js** installed. You can check by running `node -v` in your terminal. If not installed, download it from [nodejs.org](https://nodejs.org/).
+## 🚀 Quick Start
 
-## 2. Local Setup
-I have already generated the source code for you. Now you need to install the dependencies and run it.
+### Prerequisites
+- **Node.js** (v18 or higher) - [Download here](https://nodejs.org/)
 
-1.  Open your terminal in this directory (`C:\Users\Soumya\Documents\soumyadbanik`).
-2.  Install dependencies:
-    ```bash
-    npm install
-    ```
-    *Note: This will install React, Framer Motion (for animations), and Vite.*
+### Running Locally
 
-3.  Start the local server:
-    ```bash
-    npm run dev
-    ```
-4.  Open the link shown (usually `http://localhost:5173`) to view your creative portfolio.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/soumyadbanik/soumyadbanik.github.io.git
+   cd soumyadbanik.github.io
+   ```
 
-## 3. Customization
--   **Content**: Edit `src/data/resume.js` to update your bio, projects, or add new experiences.
--   **Images**: For the "Creative" section, I used placeholders. To add real photos:
-    1.  Place images in the `public/` folder (create one if it doesn't exist).
-    2.  Update `src/components/ExtraCurricular.jsx` to reference them.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-## 4. Deployment to GitHub Pages (Automated CI/CD)
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-I have configured a **GitHub Actions** workflow (`.github/workflows/deploy.yml`) that will automatically build and deploy your site whenever you push to GitHub.
+4. Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-### Step 1: Create Repository
-1.  Go to [GitHub.com](https://github.com/new).
-2.  Create a new repository named `soumyadbanik.github.io` (or `soumyadbanik` if you prefer a project page).
-3.  Do **not** extract a README or .gitignore (we already have them).
+## 🛠️ Tech Stack
 
-### Step 2: Push Your Code
-You need to push this code to the new repository. Open your terminal in this folder (`C:\Users\Soumya\Documents\soumyadbanik`) and run the following (replace `YOUR_REPO_URL` with the one from Step 1, e.g., `https://github.com/soumyadbanik/soumyadbanik.github.io.git`):
+- **React** - UI framework
+- **Vite** - Build tool and dev server
+- **Framer Motion** - Animations
+- **Lucide React** - Icons
 
-```bash
-git remote add origin YOUR_REPO_URL
-git push -u origin main
+## 📁 Project Structure
+
+```
+├── public/              # Static assets (images, fonts)
+├── src/
+│   ├── components/      # Reusable UI components
+│   ├── data/            # Content data (resume.js, creative.js)
+│   ├── pages/           # Page components
+│   ├── utils/           # Utility functions
+│   └── App.jsx          # Main app component
+└── .github/workflows/   # CI/CD configuration
 ```
 
-### Step 3: Configure Pages
-1.  Go to your Repository Settings > **Pages**.
-2.  Under **Build and deployment** > **Source**, select **GitHub Actions** (it might default to "Deploy from a branch", change it to "GitHub Actions").
-3.  That's it! Looking at the "Actions" tab in your repo, you should see a "Deploy to GitHub Pages" workflow running.
+## ✏️ Customization
 
-### Future Updates
-Whenever you want to update your portfolio:
-1.  Edit the code or `resume.js`.
-2.  Commit the changes:
-    ```bash
-    git add .
-    git commit -m "Updated resume"
-    git push
-    ```
-3.  The site will automatically update within minutes.
+### Updating Content
+Edit the data files in `src/data/`:
+- **`resume.js`** - Work experience, education, projects, skills
+- **`creative.js`** - Photography, music, and other creative content
+
+### Adding Images
+1. Place images in the `public/images/` folder
+2. Reference them in your data files using `/images/your-image.jpg`
+
+## 🌐 Deployment
+
+This site is automatically deployed to GitHub Pages via GitHub Actions. Any push to the `main` branch triggers a new deployment.
+
+### Manual Deployment
+```bash
+npm run build
+```
+The built files will be in the `dist/` folder.
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
