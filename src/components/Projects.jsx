@@ -58,9 +58,9 @@ const ProjectCard = ({ project, index }) => {
                     backgroundColor: 'var(--card-bg)',
                     borderBottom: '1px solid var(--exp-projects-border)',
                     display: 'flex',
-                    alignItems: 'center',
                     justifyContent: 'center',
-                    overflow: 'hidden'
+                    overflow: 'hidden',
+                    flexShrink: 0
                 }}>
                     {project.thumbnail ? (
                         project.thumbnail.toLowerCase().endsWith('.mp4') || project.thumbnail.toLowerCase().endsWith('.webm') ? (
