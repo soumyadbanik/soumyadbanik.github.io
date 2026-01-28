@@ -44,7 +44,7 @@ const ProjectCard = ({ project, index }) => {
                     border: '1px solid var(--exp-projects-border)',
                     display: 'flex',
                     flexDirection: 'column',
-                    height: '100%',
+                    height: '420px',
                     overflow: 'hidden',
                     transition: 'border-color 0.3s, transform 0.3s'
                 }}

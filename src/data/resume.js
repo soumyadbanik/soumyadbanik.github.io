@@ -123,6 +123,23 @@ export const resumeData = {
     ],
     projects: [
         {
+            title: "Portfolio Template",
+            period: "December 2025",
+            description: "Template for this website named soumyadbanik.github.io",
+            tech: ["React", "Tailwind CSS", "TypeScript", "Vite"],
+            links: [
+                {
+                    url: "https://github.com/soumyadbanik/soumyadbanik.github.io",
+                    type: "github",
+                    label: "Source Code"
+                }
+            ],
+            thumbnail: "/images/projects/soumyadbanik_site.png"
+
+        },
+
+
+        {
             title: "Virtual Eyewear Try-on System",
             period: "January 2024 - Present",
             description: "Developed a real-time virtual eyewear try-on system using facial landmark detection and geometric transformation. Implementing face shape analysis for personalized recommendations. Investigating challenges in perspective-correct rendering and occlusion handling.",
