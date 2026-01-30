@@ -78,7 +78,8 @@ const ResearchItem = ({ item, index }) => {
                                 position: 'relative',
                                 paddingLeft: '1.25rem',
                                 paddingBottom: rIndex < item.roles.length - 1 ? '1rem' : 0,
-                                borderLeft: rIndex < item.roles.length - 1 ? '2px solid var(--exp-research-border)' : 'none'
+                                borderLeft: rIndex < item.roles.length - 1 ? '2px solid var(--exp-research-border)' : '2px solid transparent',
+                                background: rIndex === item.roles.length - 1 ? 'linear-gradient(to bottom, var(--exp-research-border), var(--exp-research-border)) no-repeat left top / 2px 10px border-box' : 'none'
                             }}>
                                 {/* Role Dot */}
                                 <div style={{

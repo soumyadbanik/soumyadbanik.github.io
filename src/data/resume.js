@@ -39,16 +39,16 @@ export const resumeData = {
                 },
                 {
                     role: "Teaching Assistant",
-                    period: "January 2022 – October 2022",
+                    period: "Aug 2022 – Sep 2022",
                     contributions: [
                         "Machine Learning I",
                     ]
                 },
                 {
                     role: "Teaching Assistant",
-                    period: "January 2022 – April 2022",
+                    period: "Feb 2022 – Jul 2022",
                     contributions: [
-                        "M.Tech CS, Advance Image Processing",
+                        "M.Tech CS, Advanced Image Processing",
                     ],
                     link: "https://docs.google.com/presentation/d/1T7tK6g_ol-zjFhTIGDfF5DXI_b8DviVseTPoGZGOXdw/edit?usp=sharing"
                 }
