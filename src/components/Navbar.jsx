@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Sparkles } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 
 import profilePic from '../assets/soumyadbanik.png';
@@ -45,7 +45,7 @@ const Navbar = () => {
         { name: 'Experience', href: '#industry-experience', isHash: true },
         { name: 'Projects', href: '#projects', isHash: true },
         { name: 'Education', href: '#education', isHash: true },
-        { name: 'Beyond Code', href: '/beyond-code', isHash: false },
+        { name: 'Beyond Code', href: '/beyond-code', isHash: false, isSpecial: true },
     ];
 
     // Normal navbar (top, before scroll)
@@ -135,6 +135,32 @@ const Navbar = () => {
                                             {link.name}
                                         </Link>
                                     )
+                                ) : link.isSpecial ? (
+                                    <Link
+                                        to={link.href}
+                                        style={{
+                                            fontSize: '0.85rem',
+                                            opacity: location.pathname === link.href ? 1 : 0.7,
+                                            color: location.pathname === link.href ? 'var(--accent)' : 'inherit',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            gap: '0.4rem',
+                                            transition: 'all 0.2s ease'
+                                        }}
+                                        onMouseEnter={(e) => {
+                                            e.currentTarget.style.opacity = '1';
+                                            e.currentTarget.style.color = 'var(--accent)';
+                                            e.currentTarget.style.transform = 'translateY(-2px)';
+                                        }}
+                                        onMouseLeave={(e) => {
+                                            e.currentTarget.style.opacity = location.pathname === link.href ? '1' : '0.7';
+                                            e.currentTarget.style.color = location.pathname === link.href ? 'var(--accent)' : 'inherit';
+                                            e.currentTarget.style.transform = 'translateY(0)';
+                                        }}
+                                    >
+                                        <Sparkles size={14} />
+                                        <span>{link.name}</span>
+                                    </Link>
                                 ) : (
                                     <Link
                                         to={link.href}
@@ -372,6 +398,35 @@ const Navbar = () => {
                                             {link.name}
                                         </Link>
                                     )
+                                ) : link.isSpecial ? (
+                                    <Link
+                                        to={link.href}
+                                        onClick={() => setDrawerOpen(false)}
+                                        style={{
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            gap: '0.5rem',
+                                            fontSize: '1rem',
+                                            color: location.pathname === link.href ? 'var(--accent)' : 'var(--text-secondary)',
+                                            padding: '0.75rem 1rem',
+                                            borderRadius: '6px',
+                                            backgroundColor: location.pathname === link.href ? 'var(--card-bg)' : 'transparent',
+                                            transition: 'all 0.2s ease'
+                                        }}
+                                        onMouseEnter={(e) => {
+                                            e.currentTarget.style.color = 'var(--accent)';
+                                            e.currentTarget.style.backgroundColor = 'var(--card-bg)';
+                                            e.currentTarget.style.transform = 'translateY(-2px)';
+                                        }}
+                                        onMouseLeave={(e) => {
+                                            e.currentTarget.style.color = location.pathname === link.href ? 'var(--accent)' : 'var(--text-secondary)';
+                                            e.currentTarget.style.backgroundColor = location.pathname === link.href ? 'var(--card-bg)' : 'transparent';
+                                            e.currentTarget.style.transform = 'translateY(0)';
+                                        }}
+                                    >
+                                        <Sparkles size={18} />
+                                        {link.name}
+                                    </Link>
                                 ) : (
                                     <Link
                                         to={link.href}
