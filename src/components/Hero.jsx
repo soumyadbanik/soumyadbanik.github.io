@@ -210,7 +210,7 @@ const Hero = () => {
 
                         {/* CV Button */}
                         <a
-                            href="/BANIK.Soumyadeep_CV.pdf"
+                            href="soumyadbanik_cv_2025.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
                             style={{
