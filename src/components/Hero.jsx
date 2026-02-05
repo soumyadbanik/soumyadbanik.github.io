@@ -433,7 +433,7 @@ const Hero = () => {
                                     .cv-buffer-zone {
                                         left: -50px !important;
                                         right: -50px !important;
-                                        bottom: -130px !important;
+                                        bottom: -100px !important;
                                     }
                                     .cv-fan-item.item-1,
                                     .cv-fan-item.item-2 {
@@ -444,22 +444,22 @@ const Hero = () => {
                                     .cv-hover-menu:active .item-1,
                                     .cv-hover-menu:focus-within .item-1 {
                                         opacity: 1 !important;
-                                        transform: translate(-50%, 15px) rotate(0deg) scale(1) !important;
+                                        transform: translate(-50%, 8px) rotate(0deg) scale(1) !important;
                                         pointer-events: auto !important;
                                     }
                                     .cv-hover-menu:hover .item-2,
                                     .cv-hover-menu:active .item-2,
                                     .cv-hover-menu:focus-within .item-2 {
                                         opacity: 1 !important;
-                                        transform: translate(-50%, 65px) rotate(0deg) scale(1) !important;
+                                        transform: translate(-50%, 45px) rotate(0deg) scale(1) !important;
                                         pointer-events: auto !important;
                                     }
                                     .cv-hover-menu:hover .item-1:hover,
                                     .cv-hover-menu:hover .item-2:hover {
-                                        transform: translate(-50%, 15px) rotate(0deg) scale(1.06) !important;
+                                        transform: translate(-50%, 8px) rotate(0deg) scale(1.06) !important;
                                     }
                                     .cv-hover-menu:hover .item-2:hover {
-                                        transform: translate(-50%, 65px) rotate(0deg) scale(1.06) !important;
+                                        transform: translate(-50%, 45px) rotate(0deg) scale(1.06) !important;
                                     }
                                 }
                             `}</style>
