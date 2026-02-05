@@ -219,6 +219,7 @@ const Hero = () => {
                         >
                             {/* Invisible buffer zone */}
                             <div
+                                className="cv-buffer-zone"
                                 style={{
                                     position: 'absolute',
                                     top: '-15px',
@@ -425,17 +426,40 @@ const Hero = () => {
 
                                 /* Mobile Fallback */
                                 @media (max-width: 768px) {
+                                    .cv-hover-menu {
+                                        position: relative;
+                                        overflow: visible !important;
+                                    }
+                                    .cv-buffer-zone {
+                                        left: -50px !important;
+                                        right: -50px !important;
+                                        bottom: -130px !important;
+                                    }
+                                    .cv-fan-item.item-1,
+                                    .cv-fan-item.item-2 {
+                                        left: 50% !important;
+                                        top: 100% !important;
+                                    }
+                                    .cv-hover-menu:hover .item-1,
                                     .cv-hover-menu:active .item-1,
                                     .cv-hover-menu:focus-within .item-1 {
                                         opacity: 1 !important;
-                                        transform: translate(0, 45px) rotate(0deg) scale(1) !important;
+                                        transform: translate(-50%, 15px) rotate(0deg) scale(1) !important;
                                         pointer-events: auto !important;
                                     }
+                                    .cv-hover-menu:hover .item-2,
                                     .cv-hover-menu:active .item-2,
                                     .cv-hover-menu:focus-within .item-2 {
                                         opacity: 1 !important;
-                                        transform: translate(0, 90px) rotate(0deg) scale(1) !important;
+                                        transform: translate(-50%, 65px) rotate(0deg) scale(1) !important;
                                         pointer-events: auto !important;
+                                    }
+                                    .cv-hover-menu:hover .item-1:hover,
+                                    .cv-hover-menu:hover .item-2:hover {
+                                        transform: translate(-50%, 15px) rotate(0deg) scale(1.06) !important;
+                                    }
+                                    .cv-hover-menu:hover .item-2:hover {
+                                        transform: translate(-50%, 65px) rotate(0deg) scale(1.06) !important;
                                     }
                                 }
                             `}</style>
