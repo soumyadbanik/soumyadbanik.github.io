@@ -156,7 +156,7 @@ const Hero = () => {
                             I work with the teams responsible for building real-time vision systems for live productions, primarily focused on global cricket.
                         </p>
                         <p style={{ marginBottom: '1rem', fontSize: '0.95rem' }}>
-                            My industry work focuses on Multi-view geometry and 3D vision for Human Pose Estimation and Reconstruction, motion capture (MoCap), Human Activity Recognition (HAR), Segmentation, and Object Tracking for high-speed broadcast cameras and edge devices.
+                            My industry work focuses on Multi-view geometry and 3D vision for Human Pose Estimation and Reconstruction, motion capture (MoCap), Human Activity Recognition (HAR), Person Re-Identification (Re-ID), Segmentation, and Object Tracking for high-speed broadcast cameras and edge devices.
                         </p>
                         <p style={{ marginBottom: '1rem', fontSize: '0.95rem' }}>
                             Previously I worked at <ExternalLink href="https://www.isical.ac.in/~ash/">Prof. Ashish Ghosh</ExternalLink>'s lab at <ExternalLink href="https://www2.isical.ac.in/~miu/">MIU</ExternalLink> @ <ExternalLink href="https://www.isical.ac.in/">ISI, Kolkata</ExternalLink> as a Project Linked Junior Research Fellow on Human Activity Recognition for healthcare using Graph representation learning.
@@ -208,37 +208,238 @@ const Hero = () => {
                             <Mail size={20} />
                         </a>
 
-                        {/* CV Button */}
-                        <a
-                            href="soumyadbanik_cv_2025.pdf"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                        {/* CV Hover Menu - macOS Folder Style with Glowing Effect */}
+                        <div
+                            className="cv-hover-menu"
                             style={{
+                                position: 'relative',
                                 marginLeft: '0.5rem',
-                                padding: '0.6rem 1.2rem',
-                                backgroundColor: 'var(--accent)',
-                                color: '#ffffff',
-                                borderRadius: '4px',
-                                fontWeight: 500,
-                                fontSize: '0.85rem',
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: '0.4rem',
-                                border: '1px solid var(--accent)',
-                                transition: 'all 0.2s ease'
-                            }}
-                            onMouseEnter={(e) => {
-                                e.currentTarget.style.backgroundColor = 'transparent';
-                                e.currentTarget.style.color = 'var(--accent)';
-                            }}
-                            onMouseLeave={(e) => {
-                                e.currentTarget.style.backgroundColor = 'var(--accent)';
-                                e.currentTarget.style.color = '#ffffff';
+                                zIndex: 20
                             }}
                         >
-                            <FileText size={16} />
-                            CV
-                        </a>
+                            {/* Invisible buffer zone */}
+                            <div
+                                style={{
+                                    position: 'absolute',
+                                    top: '-15px',
+                                    left: '-30px',
+                                    right: '-100px',
+                                    bottom: '-70px',
+                                    zIndex: 5
+                                }}
+                            />
+
+                            {/* Main CV Button - Transparent to match social icons */}
+                            <div
+                                className="cv-folder-button"
+                                style={{
+                                    position: 'relative',
+                                    padding: '0.6rem 1rem',
+                                    background: 'transparent',
+                                    color: 'var(--text-secondary)',
+                                    borderRadius: '6px',
+                                    fontWeight: 500,
+                                    fontSize: '0.85rem',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '0.4rem',
+                                    cursor: 'pointer',
+                                    zIndex: 10,
+                                    transition: 'all 0.2s ease',
+                                    border: '1px solid var(--card-border)'
+                                }}
+                            >
+                                {/* Folder Tab - subtle indicator */}
+                                <div style={{
+                                    position: 'absolute',
+                                    top: '-4px',
+                                    left: '8px',
+                                    width: '20px',
+                                    height: '6px',
+                                    background: 'var(--card-border)',
+                                    borderRadius: '3px 3px 0 0',
+                                    zIndex: -1,
+                                    transition: 'background 0.2s ease'
+                                }} className="folder-tab" />
+                                {/* Peek indicator */}
+                                <div style={{
+                                    position: 'absolute',
+                                    bottom: '-2px',
+                                    left: '50%',
+                                    transform: 'translateX(-50%)',
+                                    width: '14px',
+                                    height: '2px',
+                                    background: 'var(--card-border)',
+                                    borderRadius: '2px 2px 0 0',
+                                    transition: 'background 0.2s ease'
+                                }} className="peek-indicator" />
+                                <FileText size={16} />
+                                <span>CV</span>
+                            </div>
+
+                            {/* Option 1: Full CV - Horizontal Right Position */}
+                            <a
+                                href="BANIK.Soumyadeep_full_CV.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="cv-fan-item item-1"
+                                style={{
+                                    position: 'absolute',
+                                    top: '50%',
+                                    left: '100%',
+                                    transform: 'translateY(-50%)',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '0.6rem',
+                                    zIndex: 9,
+                                    opacity: 0,
+                                    transformOrigin: 'left center',
+                                    transition: 'all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+                                    pointerEvents: 'none',
+                                    textDecoration: 'none'
+                                }}
+                            >
+                                {/* Simple Icon - theme aware */}
+                                <span className="cv-icon" style={{
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center'
+                                }}>
+                                    <FileText size={26} strokeWidth={1.8} />
+                                </span>
+                                {/* Title Pill */}
+                                <span style={{
+                                    padding: '0.4rem 0.8rem',
+                                    backgroundColor: '#f8f0e3',
+                                    color: '#2a2a2a',
+                                    borderRadius: '15px',
+                                    fontSize: '0.75rem',
+                                    fontWeight: 500,
+                                    whiteSpace: 'nowrap',
+                                    boxShadow: '0 3px 10px rgba(0,0,0,0.12)'
+                                }}>
+                                    Full CV
+                                </span>
+                            </a>
+
+                            {/* Option 2: Single Page CV - Stacked Below Item 1 */}
+                            <a
+                                href="BANIK.Soumyadeep_single_page_CV.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="cv-fan-item item-2"
+                                style={{
+                                    position: 'absolute',
+                                    top: '100%',
+                                    left: '100%',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '0.6rem',
+                                    zIndex: 8,
+                                    opacity: 0,
+                                    transformOrigin: 'top left',
+                                    transform: 'translate(0, 0) scale(0.6)',
+                                    transition: 'all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+                                    transitionDelay: '0.05s',
+                                    pointerEvents: 'none',
+                                    textDecoration: 'none'
+                                }}
+                            >
+                                {/* Simple Icon - theme aware */}
+                                <span className="cv-icon" style={{
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center'
+                                }}>
+                                    <FileText size={26} strokeWidth={1.8} />
+                                </span>
+                                {/* Title Pill */}
+                                <span style={{
+                                    padding: '0.4rem 0.8rem',
+                                    backgroundColor: '#f8f0e3',
+                                    color: '#2a2a2a',
+                                    borderRadius: '15px',
+                                    fontSize: '0.75rem',
+                                    fontWeight: 500,
+                                    whiteSpace: 'nowrap',
+                                    boxShadow: '0 3px 10px rgba(0,0,0,0.12)'
+                                }}>
+                                    Single Page CV
+                                </span>
+                            </a>
+
+                            <style>{`
+                                /* Folder button hover - match social icons with glow */
+                                .cv-hover-menu:hover .cv-folder-button {
+                                    border-color: var(--accent);
+                                    color: var(--accent);
+                                    background-color: rgba(59, 130, 246, 0.1);
+                                    box-shadow: 0 0 12px rgba(59, 130, 246, 0.4);
+                                }
+                                .cv-hover-menu:hover .folder-tab,
+                                .cv-hover-menu:hover .peek-indicator {
+                                    background: var(--accent) !important;
+                                }
+
+                                /* Theme-aware icon colors */
+                                .cv-icon {
+                                    color: #f8f0e3;
+                                    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+                                }
+                                [data-theme="light"] .cv-icon {
+                                    color: #5a4a3a;
+                                    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));
+                                }
+
+                                /* Item 1: Horizontal Slide Right with slight tilt */
+                                .cv-hover-menu:hover .item-1 {
+                                    opacity: 1 !important;
+                                    transform: translateY(-50%) translateX(12px) rotate(-3deg) scale(1) !important;
+                                    pointer-events: auto !important;
+                                }
+
+                                /* Item 2: Stacked below Item 1, aligned left edges */
+                                .cv-hover-menu:hover .item-2 {
+                                    opacity: 1 !important;
+                                    transform: translate(12px, 8px) rotate(5deg) scale(1) !important;
+                                    pointer-events: auto !important;
+                                }
+
+                                .cv-fan-item:hover {
+                                    z-index: 25 !important;
+                                }
+                                
+                                /* Blue highlighter on hover for both themes - icons only */
+                                .cv-fan-item:hover .cv-icon {
+                                    color: var(--accent) !important;
+                                    filter: drop-shadow(0 2px 6px rgba(59, 130, 246, 0.4)) !important;
+                                }
+                                
+                                /* Fix precise hover interactions */
+                                .cv-hover-menu:hover .item-1:hover {
+                                    transform: translateY(-50%) translateX(12px) rotate(-3deg) scale(1.06) !important;
+                                }
+                                .cv-hover-menu:hover .item-2:hover {
+                                    transform: translate(12px, 8px) rotate(5deg) scale(1.06) !important;
+                                }
+
+                                /* Mobile Fallback */
+                                @media (max-width: 768px) {
+                                    .cv-hover-menu:active .item-1,
+                                    .cv-hover-menu:focus-within .item-1 {
+                                        opacity: 1 !important;
+                                        transform: translate(0, 45px) rotate(0deg) scale(1) !important;
+                                        pointer-events: auto !important;
+                                    }
+                                    .cv-hover-menu:active .item-2,
+                                    .cv-hover-menu:focus-within .item-2 {
+                                        opacity: 1 !important;
+                                        transform: translate(0, 90px) rotate(0deg) scale(1) !important;
+                                        pointer-events: auto !important;
+                                    }
+                                }
+                            `}</style>
+                        </div>
                     </motion.div>
                 </div>
             </div>
