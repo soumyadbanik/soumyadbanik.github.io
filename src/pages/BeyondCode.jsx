@@ -187,7 +187,7 @@ const BeyondCode = () => {
                         color: 'var(--text-primary)',
                         boxShadow: '0 4px 20px rgba(0,0,0,0.1)'
                     }}>
-                        " The e<span style={{ color: 'var(--accent)', fontWeight: 'bold' }}>ART</span>h without <span style={{ color: 'var(--accent)', fontWeight: 'bold' }}>ART</span> is just 'eh'."
+                        " The e<span style={{ color: 'var(--accent)', fontWeight: 'bold' }}>art</span>h without <span style={{ color: 'var(--accent)', fontWeight: 'bold' }}>art</span> is just 'eh'."
                         <footer style={{
                             marginTop: '1rem',
                             fontSize: '1rem',
