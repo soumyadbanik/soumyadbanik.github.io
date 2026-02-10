@@ -60,7 +60,7 @@ export const resumeData = {
             company: "AI LENS",
             roles: [
                 {
-                    role: "Computer Vision Developer(Freelance)",
+                    role: "Computer Vision Developer (Contract)",
                     period: "Jan 2024 – Present",
                     location: "Remote",
                     description: "Building a virtual specs try-on platform and recommendation system ( In collaboration with [AI LENS](https://www.ailens.ai/) )",
