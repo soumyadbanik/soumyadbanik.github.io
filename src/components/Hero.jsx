@@ -165,7 +165,7 @@ const Hero = () => {
                             I completed my M.Sc. in Computer Science at{' '}
                             <ExternalLink href="https://rkmvu.ac.in/">Ramakrishna Mission Vivekananda Educational and Research Institute</ExternalLink>, Belur, India.
                             I was extremely fortunate to attend some great courses and receive mentorship from <ExternalLink href="https://scholar.google.com/citations?user=rOiTTvMAAAAJ&hl=en">Prof. Joydeep Mukherjee</ExternalLink> and <ExternalLink href="https://scholar.google.com/citations?hl=en&user=mVAg1nwAAAAJ">Prof. Sujoy Biswas</ExternalLink>{' '}
-                            during their courses on Graph Theory and Machine Learning Systems - which really helped me shape my research direction. Please feel free to reach out to me if our work intersects.
+                            during their courses on Graph Theory and Machine Learning Systems, <ExternalLink href="http://cs.rkmvu.ac.in/~tamal/">Tamal Maharaj</ExternalLink>, Computer Vision and Pattern Recognition (CS342) - which really helped me shape my research direction. Please feel free to reach out to me if our work intersects.
                         </p>
                     </motion.div>
 
