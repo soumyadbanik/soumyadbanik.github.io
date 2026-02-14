@@ -156,7 +156,7 @@ const Hero = () => {
                             I work with the teams responsible for building real-time vision systems for live productions, primarily focused on global cricket.
                         </p>
                         <p style={{ marginBottom: '1rem', fontSize: '0.95rem' }}>
-                            My industry work focuses on Multi-view geometry and 3D vision for Human Pose Estimation and Reconstruction, motion capture (MoCap), Human Activity Recognition (HAR), Person Re-Identification (Re-ID), Segmentation, and Object Tracking for high-speed broadcast cameras and edge devices.
+                            My industry work focuses on Multi-view geometry and 3D vision for Human Pose Estimation and Reconstruction, motion capture (MoCap), Human Activity Recognition (HAR), Person Re-Identification (Re-ID), Segmentation, and Object Tracking for high-speed broadcast cameras and edge devices. During my time at Happymonk.ai, where I worked on human action recognition, I was supervised by <ExternalLink href="https://www.bits-pilani.ac.in/goa/snehanshu-saha/">Prof. Snehanshu Saha</ExternalLink>{''}.
                         </p>
                         <p style={{ marginBottom: '1rem', fontSize: '0.95rem' }}>
                             Previously I worked at <ExternalLink href="https://www.isical.ac.in/~ash/">Prof. Ashish Ghosh</ExternalLink>'s lab at <ExternalLink href="https://www2.isical.ac.in/~miu/">MIU</ExternalLink> @ <ExternalLink href="https://www.isical.ac.in/">ISI, Kolkata</ExternalLink> as a Project Linked Junior Research Fellow on Human Activity Recognition for healthcare using Graph representation learning.
