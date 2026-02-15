@@ -151,7 +151,6 @@ export const resumeData = {
                 }
             ],
             researchAspects: ["Human Mesh Recovery", "Multi-view Geometry", "Pose Estimation"],
-            // Add your image/gif: "/images/projects/eyewear-tryon.gif"
             thumbnail: "/images/projects/3d_pose.png"
         },
 
@@ -168,7 +167,6 @@ export const resumeData = {
                 }
             ],
             researchAspects: ["Facial geometry estimation", "Real-time rendering", "Recommendation systems"],
-            // Add your image/gif: "/images/projects/eyewear-tryon.gif"
             thumbnail: "/images/projects/spectsgenie.png"
         },
         {
@@ -183,7 +181,6 @@ export const resumeData = {
                 }
             ],
             researchAspects: ["Multi-object tracking", "Aerial view analysis", "Distance estimation"],
-            // Add your image/gif: "/images/projects/social-distancing.gif"
             thumbnail: "/images/projects/hyang_social_short.webm"
         },
         {
@@ -213,7 +210,6 @@ export const resumeData = {
                 }
             ],
             researchAspects: ["Information hiding", "Frame selection algorithms", "Security analysis"],
-            // Add your image/gif: "/images/projects/steganography.png"
             thumbnail: "/images/projects/stego.png"
         }
     ],
