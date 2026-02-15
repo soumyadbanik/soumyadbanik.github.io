@@ -147,12 +147,12 @@ export const resumeData = {
                 {
                     url: "https://medium.com/@soumya.d.banik/3d-player-pose-reconstruction-in-live-sports-broadcasting-from-human-mesh-recovery-to-real-time-6093dff2155c",
                     type: "blogpost",
-                    label: "Try it"
+                    label: "Blogpost"
                 }
             ],
             researchAspects: ["Human Mesh Recovery", "Multi-view Geometry", "Pose Estimation"],
             // Add your image/gif: "/images/projects/eyewear-tryon.gif"
-            thumbnail: "/images/projects/spectsgenie.png"
+            thumbnail: "/images/projects/3d_pose.png"
         },
 
         {
