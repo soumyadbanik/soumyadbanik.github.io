@@ -141,7 +141,7 @@ export const resumeData = {
         {
             title: "MoQap: Motion Capture in the wild",
             period: "January 2025 - Present",
-            description: "A markerless 3D motion capture system for live sports. Engineered to reconstruct professional athletes from broadcast footage using 4D human models and multi-view geometry",
+            description: "A markerless 3D motion capture system for live sports. Engineered to reconstruct professional athletes from broadcast footage using pose estimation models and multi-view geometry",
             tech: ["Python", "PyTorch", "OpenCV", "Blender", "Unreal Engine"],
             links: [
                 {
