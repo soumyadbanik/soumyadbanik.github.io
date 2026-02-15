@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { resumeData } from '../data/resume';
-import { Github, Folder, Image, X, ExternalLink } from 'lucide-react';
+import { Github, Folder, Image, X, ExternalLink, BookOpen } from 'lucide-react';
 
 const ProjectCard = ({ project, index }) => {
     const [isExpanded, setIsExpanded] = useState(false);
@@ -126,6 +126,11 @@ const ProjectCard = ({ project, index }) => {
                                 >
                                     {link.type === 'github' ? (
                                         <Github size={18} />
+                                    ) : link.type === 'blogpost' ? (
+                                        <>
+                                            <span style={{ fontSize: '0.85rem', fontWeight: 500 }}>{link.label}</span>
+                                            <BookOpen size={16} />
+                                        </>
                                     ) : (
                                         <>
                                             <span style={{ fontSize: '0.85rem', fontWeight: 500 }}>{link.label}</span>
@@ -330,6 +335,11 @@ const ProjectCard = ({ project, index }) => {
                                         >
                                             {link.type === 'github' ? (
                                                 <Github size={18} />
+                                            ) : link.type === 'blogpost' ? (
+                                                <>
+                                                    <span style={{ fontSize: '0.85rem', fontWeight: 500 }}>{link.label}</span>
+                                                    <BookOpen size={16} />
+                                                </>
                                             ) : (
                                                 <>
                                                     <span style={{ fontSize: '0.85rem', fontWeight: 500 }}>{link.label}</span>

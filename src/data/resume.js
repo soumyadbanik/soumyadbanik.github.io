@@ -138,6 +138,22 @@ export const resumeData = {
 
         },
 
+        {
+            title: "MoQap: Motion Capture in the wild",
+            period: "January 2025 - Present",
+            description: "A markerless 3D motion capture system for live sports. Engineered to reconstruct professional athletes from broadcast footage using 4D human models and multi-view geometry",
+            tech: ["Python", "PyTorch", "OpenCV", "Blender", "Unreal Engine"],
+            links: [
+                {
+                    url: "https://medium.com/@soumya.d.banik/3d-player-pose-reconstruction-in-live-sports-broadcasting-from-human-mesh-recovery-to-real-time-6093dff2155c",
+                    type: "blogpost",
+                    label: "Try it"
+                }
+            ],
+            researchAspects: ["Human Mesh Recovery", "Multi-view Geometry", "Pose Estimation"],
+            // Add your image/gif: "/images/projects/eyewear-tryon.gif"
+            thumbnail: "/images/projects/spectsgenie.png"
+        },
 
         {
             title: "Virtual Eyewear Try-on System",
