@@ -172,7 +172,7 @@ const BeyondCode = () => {
                 }}>
                     Beyond Code
                 </h1>
-                <div style={{ maxWidth: '800px', marginBottom: '4rem', color: 'var(--text-secondary)', fontSize: '1.2rem', lineHeight: '1.8' }}>
+                <div style={{ maxWidth: '100%', marginBottom: '4rem', color: 'var(--text-secondary)', fontSize: '1.2rem', lineHeight: '1.8' }}>
 
                     <blockquote style={{
                         margin: '2rem 0',
