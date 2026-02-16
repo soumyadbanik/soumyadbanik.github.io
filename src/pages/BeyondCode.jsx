@@ -202,10 +202,12 @@ const BeyondCode = () => {
                     </blockquote>
 
                     <p style={{ marginBottom: '1.5rem' }}>
-                        Beyond algorithms and deep learning models, I perceive the world through <span style={{ color: 'var(--accent)', fontWeight: '500' }}>lenses, melodies, and sketches</span>. I started using a camera in high school, after my father bought me one in eighth grade.
+                        Beyond algorithms and deep learning models, I perceive the world through <span style={{ color: 'var(--accent)', fontWeight: '500' }}>lenses, melodies, and sketches</span>.
                     </p>
                     <p>
-                        The interest later flowed into Computer Vision.
+                        I started using a camera in high school, after my father bought me one in eighth grade. The interest later flowed into Computer Vision.
+                    </p>
+                    <p>
                         During grad school, curiosity took over and I started exploring more Art forms. From doing art decos, graphic design e.g. desiging posters, banners for departmental events to performing arts, including theatre and music.
                         I'm still learning. Here are some glimpses of how I interpret the world.
                     </p>
