@@ -105,8 +105,8 @@ function App() {
                     borderTop: '1px solid var(--card-border)'
                 }}>
                     <div className="container">
-                        <p>Designed & Built by Soumyadeep Banik</p>
-                        <p style={{ marginTop: '0.5rem', opacity: 0.6 }}>© {new Date().getFullYear()}</p>
+                        {/* <p>Soumyadeep Banik</p> */}
+                        <p style={{ marginTop: '0.5rem', opacity: 0.6 }}>© {new Date().getFullYear()} Soumyadeep Banik</p>
                         {SHOW_VISITOR_COUNTER && <VisitorCounter />}
                     </div>
                 </footer>
