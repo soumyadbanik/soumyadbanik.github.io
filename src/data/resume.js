@@ -13,7 +13,7 @@ export const resumeData = {
     researchStatement: {
         intro: "My research interests lie at the intersection of geometric computer vision and deep learning. Through applied work in sports analytics and surveillance systems, I have developed strong foundations in spatial reasoning and temporal modeling.",
         areas: [
-            "Multi-view Geometry & 3D Reconstruction",
+            "Single & Multi view 3D Human Reconstruction",
             "Human Pose Estimation & Motion Analysis",
             "Real-time Video Understanding & Tracking",
             "Edge-optimized Deep Learning Systems"
