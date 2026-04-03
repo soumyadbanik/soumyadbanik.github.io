@@ -151,7 +151,8 @@ export const resumeData = {
                 }
             ],
             researchAspects: ["Human Mesh Recovery", "Multi-view Geometry", "Pose Estimation"],
-            thumbnail: "/images/projects/unreal_animation_from_goa_footage_21_05_2025.webm"
+            thumbnail: "/images/projects/unreal_animation_from_goa_footage_21_05_2025.webm",
+            thumbnailFit: "contain"
         },
 
         {

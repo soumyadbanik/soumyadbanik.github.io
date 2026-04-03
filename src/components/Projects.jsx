@@ -73,7 +73,7 @@ const ProjectCard = ({ project, index }) => {
                                 style={{
                                     width: '100%',
                                     height: '100%',
-                                    objectFit: 'cover'
+                                    objectFit: project.thumbnailFit || 'cover'
                                 }}
                             />
                         ) : (
@@ -83,7 +83,7 @@ const ProjectCard = ({ project, index }) => {
                                 style={{
                                     width: '100%',
                                     height: '100%',
-                                    objectFit: 'cover'
+                                    objectFit: project.thumbnailFit || 'cover'
                                 }}
                             />
                         )
@@ -290,13 +290,13 @@ const ProjectCard = ({ project, index }) => {
                                         loop
                                         muted
                                         playsInline
-                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                        style={{ width: '100%', height: '100%', objectFit: project.thumbnailFit || 'cover' }}
                                     />
                                 ) : (
                                     <img
                                         src={project.thumbnail}
                                         alt={project.title}
-                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                        style={{ width: '100%', height: '100%', objectFit: project.thumbnailFit || 'cover' }}
                                     />
                                 )
                             ) : (
