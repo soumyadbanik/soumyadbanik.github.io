@@ -14,7 +14,7 @@ const Navbar = () => {
     const isHome = location.pathname === '/';
 
     useEffect(() => {
-        const handleScroll = () => setScrolled(window.scrollY > 150);
+        const handleScroll = () => setScrolled(window.scrollY > 30);
         const handleResize = () => setIsMobile(window.innerWidth < 768);
 
         window.addEventListener('scroll', handleScroll);
@@ -70,7 +70,7 @@ const Navbar = () => {
             }}
         >
             <Link to="/" style={{ fontSize: '1.3rem', fontWeight: 600, fontFamily: 'var(--font-heading)' }}>
-                S<span style={{ color: 'var(--accent)' }}>.</span>B
+                Soumyadeep Banik
             </Link>
 
             {isMobile ? (

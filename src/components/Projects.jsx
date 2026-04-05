@@ -418,7 +418,7 @@ const ProjectCard = ({ project, index }) => {
 
 const Projects = () => {
     return (
-        <section id="projects" className="section container" style={{ minHeight: 'auto' }}>
+        <section id="projects" className="section container" style={{ minHeight: 'auto', paddingTop: '30px', paddingBottom: '30px' }}>
             <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}

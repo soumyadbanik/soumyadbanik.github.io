@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { resumeData } from '../data/resume';
-import { ArrowDown, Mail, FileText, Linkedin, Github } from 'lucide-react';
+import { Mail, FileText, Linkedin, Github } from 'lucide-react';
 import ExternalLink from './ExternalLink';
 
 import profilePic from '../assets/soumyadbanik.png';
@@ -39,9 +39,9 @@ const Hero = () => {
             alignItems: 'center',
             justifyContent: 'center',
             position: 'relative',
-            paddingTop: '120px',
-            paddingBottom: '40px',
-            overflow: 'hidden'
+            paddingTop: '80px',
+            paddingBottom: '30px',
+            overflow: 'visible'
         }}>
             {/* Subtle Background Effect */}
             <div style={{
@@ -58,9 +58,7 @@ const Hero = () => {
 
             <div className="container hero-container" style={{
                 maxWidth: '1100px',
-                zIndex: 1,
-                display: 'flex',
-                alignItems: 'center'
+                zIndex: 1
             }}>
                 {/* Profile Image - Circular */}
                 <motion.div
@@ -91,51 +89,6 @@ const Hero = () => {
 
                 {/* Text Content */}
                 <div className="hero-text-content">
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.3 }}
-                        style={{
-                            color: 'var(--accent)',
-                            fontSize: '1rem',
-                            marginBottom: '0.5rem',
-                            fontWeight: 400,
-                            letterSpacing: '0.02em'
-                        }}
-                    >
-                        Hello, Welcome to my page! I'm
-                    </motion.p>
-
-                    <motion.h1
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.4 }}
-                        style={{
-                            fontSize: 'clamp(2.2rem, 5vw, 3.5rem)',
-                            fontWeight: 700,
-                            lineHeight: 1.1,
-                            marginBottom: '0.6rem',
-                            color: 'var(--text-primary)'
-                        }}
-                    >
-                        {resumeData.personalInfo.name}
-                    </motion.h1>
-
-                    <motion.h2
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.5 }}
-                        style={{
-                            fontSize: 'clamp(1rem, 2vw, 1.2rem)',
-                            color: 'var(--text-secondary)',
-                            marginBottom: '1.5rem',
-                            fontWeight: 400,
-                            letterSpacing: '0.01em'
-                        }}
-                    >
-                        {resumeData.personalInfo.title}
-                    </motion.h2>
-
                     <motion.div
                         className="hero-paragraphs"
                         initial={{ opacity: 0, y: 20 }}
@@ -144,24 +97,24 @@ const Hero = () => {
                         style={{
                             maxWidth: '100%',
                             color: 'var(--text-secondary)',
-                            marginBottom: '1.5rem',
-                            lineHeight: 1.65
+                            marginBottom: '1rem',
+                            lineHeight: 1.5
                         }}
                     >
-                        <p style={{ marginBottom: '1rem', fontSize: '0.95rem' }}>
+                        <p style={{ marginBottom: '0.6rem', fontSize: '0.9rem' }}>
                             I am a Computer Vision Engineer at <ExternalLink href="https://quidich.com/">Quidich Innovation Labs</ExternalLink>, a sports broadcasting company based in India.
                             I work with the teams responsible for building real-time vision systems for live productions, primarily focused on global cricket.
                         </p>
-                        <p style={{ marginBottom: '1rem', fontSize: '0.95rem' }}>
+                        <p style={{ marginBottom: '0.6rem', fontSize: '0.9rem' }}>
                             My industry work focuses on Multi-view geometry and 3D vision for Human Pose Estimation and Reconstruction, motion capture (MoCap), Human Activity Recognition (HAR), Person Re-Identification (Re-ID), Segmentation, and Object Tracking for high-speed broadcast cameras and edge devices. During my time at Happymonk.ai, where I worked on human action recognition, I was supervised by <ExternalLink href="https://www.bits-pilani.ac.in/goa/snehanshu-saha/">Prof. Snehanshu Saha</ExternalLink>{''}.
                         </p>
-                        <p style={{ marginBottom: '1rem', fontSize: '0.95rem' }}>
+                        <p style={{ marginBottom: '0.6rem', fontSize: '0.9rem' }}>
                             Previously I worked at <ExternalLink href="https://www.isical.ac.in/~ash/">Prof. Ashish Ghosh</ExternalLink>'s lab at <ExternalLink href="https://www2.isical.ac.in/~miu/">MIU</ExternalLink> @ <ExternalLink href="https://www.isical.ac.in/">ISI, Kolkata</ExternalLink> as a Project Linked Junior Research Fellow on Human Activity Recognition for healthcare using Graph representation learning.
                         </p>
-                        <p style={{ fontSize: '0.95rem' }}>
+                        <p style={{ marginBottom: '0.6rem', fontSize: '0.9rem' }}>
                             In 2019, I submitted my undergrad thesis on Video Steganography at <ExternalLink href="https://rkmrc.in/pg-departments/computer-science-2/">RKMRC, Narendrapur</ExternalLink>{' '}under the supervision of <ExternalLink href="https://scholar.google.com/citations?user=LlEHeMgAAAAJ&hl=en">Prof. Bibek Ranjan Ghosh</ExternalLink>{''}.
                         </p>
-                        <p style={{ marginBottom: '1rem', fontSize: '0.95rem' }}>
+                        <p style={{ marginBottom: '0', fontSize: '0.9rem' }}>
                             In 2021, I completed my M.Sc. in Computer Science at{' '}<ExternalLink href="https://rkmvu.ac.in/">Ramakrishna Mission Vivekananda Educational and Research Institute</ExternalLink>, Belur, India. I was extremely fortunate to attend some great courses and receive mentorship from <ExternalLink href="https://scholar.google.com/citations?user=rOiTTvMAAAAJ&hl=en">Prof. Joydeep Mukherjee</ExternalLink> and <ExternalLink href="https://scholar.google.com/citations?hl=en&user=mVAg1nwAAAAJ">Prof. Sujoy Biswas</ExternalLink>{' '}
                             during their courses on Graph Theory and Machine Learning Systems, <ExternalLink href="http://cs.rkmvu.ac.in/~tamal/">Tamal Maharaj</ExternalLink>, Computer Vision and Pattern Recognition (CS342) - which really helped me shape my research direction. Please feel free to reach out to me at <span style={{ fontWeight: 'bold', whiteSpace: 'nowrap' }}>soumya [dot] d [dot] banik [at] gmail [dot] com</span> if our work intersects.
                         </p>
@@ -469,36 +422,65 @@ const Hero = () => {
 
             <style>{`
                 .hero-container {
+                    display: flex;
                     flex-direction: column;
                     text-align: center;
                     gap: 1.5rem;
                 }
                 .hero-image-wrapper {
-                    width: 200px;
-                    height: 200px;
+                    width: 160px;
+                    height: 160px;
                     flex-shrink: 0;
+                    margin: 0 auto;
                 }
                 .hero-text-content {
                     display: flex;
                     flex-direction: column;
                 }
                 .hero-paragraphs {
-                    text-align: left; /* Always keep paragraphs readable from left */
+                    text-align: left;
                 }
                 .hero-actions {
                     justify-content: center;
                 }
+
+                /* Mobile compact overrides */
+                @media (max-width: 600px) {
+                    .hero-section {
+                        padding-top: 70px !important;
+                        padding-bottom: 20px !important;
+                    }
+                    .hero-container {
+                        gap: 1rem;
+                    }
+                    .hero-image-wrapper {
+                        width: 120px;
+                        height: 120px;
+                    }
+                    .hero-paragraphs p {
+                        font-size: 0.82rem !important;
+                        margin-bottom: 0.4rem !important;
+                        line-height: 1.45 !important;
+                    }
+                    .hero-actions {
+                        gap: 0.5rem !important;
+                    }
+                }
                 
                 @media (min-width: 860px) {
                     .hero-container {
-                        flex-direction: row-reverse;
+                        flex-direction: row;
                         text-align: left;
-                        align-items: center;
+                        align-items: flex-start;
                         gap: 3.5rem;
                     }
                     .hero-image-wrapper {
-                        width: 280px;
-                        height: 280px;
+                        width: 200px;
+                        height: 200px;
+                        margin-top: 5px;
+                        margin-left: 0;
+                        margin-right: 0;
+                        margin-bottom: 0;
                     }
                     .hero-actions {
                         justify-content: flex-start !important;
@@ -506,14 +488,24 @@ const Hero = () => {
                 }
             `}</style>
 
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1.2, duration: 1 }}
-                style={{ position: 'absolute', bottom: '2rem', left: '50%', transform: 'translateX(-50%)' }}
-            >
-                <ArrowDown size={20} className="animate-bounce" color="var(--text-secondary)" />
-            </motion.div>
+            {/* Bottom Divider Line aligned with container */}
+            <div className="container" style={{ 
+                position: 'absolute', 
+                bottom: 0, 
+                left: '50%', 
+                transform: 'translateX(-50%)', 
+                maxWidth: '1100px', 
+                width: '100%',
+                zIndex: 0
+            }}>
+                <hr style={{
+                    border: 'none',
+                    height: '1px',
+                    background: 'var(--card-border)',
+                    margin: 0
+                }} />
+            </div>
+
         </section>
     );
 };
