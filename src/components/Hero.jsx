@@ -33,14 +33,14 @@ const Hero = () => {
     };
 
     return (
-        <section id="about" style={{
-            minHeight: '100vh',
+        <section id="about" className="hero-section" style={{
+            minHeight: 'auto',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             position: 'relative',
-            paddingTop: '80px',
-            paddingBottom: '80px',
+            paddingTop: '120px',
+            paddingBottom: '40px',
             overflow: 'hidden'
         }}>
             {/* Subtle Background Effect */}
@@ -56,24 +56,22 @@ const Hero = () => {
                 zIndex: -1
             }} />
 
-            <div className="container" style={{
-                maxWidth: '1000px',
+            <div className="container hero-container" style={{
+                maxWidth: '1100px',
                 zIndex: 1,
                 display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                textAlign: 'center',
-                gap: '1.5rem'
+                alignItems: 'center'
             }}>
-                {/* Profile Image - Circular, on top */}
+                {/* Profile Image - Circular */}
                 <motion.div
+                    className="hero-image-wrapper"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.2, duration: 0.5, ease: 'easeOut' }}
                 >
                     <div style={{
-                        width: '200px',
-                        height: '200px',
+                        width: '100%',
+                        height: '100%',
                         borderRadius: '50%',
                         overflow: 'hidden',
                         border: '3px solid var(--accent)',
@@ -92,7 +90,7 @@ const Hero = () => {
                 </motion.div>
 
                 {/* Text Content */}
-                <div>
+                <div className="hero-text-content">
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -139,16 +137,15 @@ const Hero = () => {
                     </motion.h2>
 
                     <motion.div
+                        className="hero-paragraphs"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.6 }}
                         style={{
                             maxWidth: '100%',
-                            margin: '0 auto',
-                            textAlign: 'left',
                             color: 'var(--text-secondary)',
-                            marginBottom: '2rem',
-                            lineHeight: 1.8
+                            marginBottom: '1.5rem',
+                            lineHeight: 1.65
                         }}
                     >
                         <p style={{ marginBottom: '1rem', fontSize: '0.95rem' }}>
@@ -171,10 +168,11 @@ const Hero = () => {
                     </motion.div>
 
                     <motion.div
+                        className="hero-actions"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.7 }}
-                        style={{ display: 'flex', gap: '0.8rem', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}
+                        style={{ display: 'flex', gap: '0.8rem', flexWrap: 'wrap', alignItems: 'center' }}
                     >
                         {/* Icon Links */}
                         <a
@@ -468,6 +466,45 @@ const Hero = () => {
                     </motion.div>
                 </div>
             </div>
+
+            <style>{`
+                .hero-container {
+                    flex-direction: column;
+                    text-align: center;
+                    gap: 1.5rem;
+                }
+                .hero-image-wrapper {
+                    width: 200px;
+                    height: 200px;
+                    flex-shrink: 0;
+                }
+                .hero-text-content {
+                    display: flex;
+                    flex-direction: column;
+                }
+                .hero-paragraphs {
+                    text-align: left; /* Always keep paragraphs readable from left */
+                }
+                .hero-actions {
+                    justify-content: center;
+                }
+                
+                @media (min-width: 860px) {
+                    .hero-container {
+                        flex-direction: row-reverse;
+                        text-align: left;
+                        align-items: center;
+                        gap: 3.5rem;
+                    }
+                    .hero-image-wrapper {
+                        width: 280px;
+                        height: 280px;
+                    }
+                    .hero-actions {
+                        justify-content: flex-start !important;
+                    }
+                }
+            `}</style>
 
             <motion.div
                 initial={{ opacity: 0 }}
