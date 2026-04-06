@@ -41,9 +41,9 @@ const Navbar = () => {
 
     const navLinks = [
         { name: 'About', href: '#about', isHash: true },
+        { name: 'Projects', href: '#projects', isHash: true },
         { name: 'Research', href: '#research', isHash: true },
         { name: 'Experience', href: '#industry-experience', isHash: true },
-        { name: 'Projects', href: '#projects', isHash: true },
         { name: 'Education', href: '#education', isHash: true },
         { name: 'Beyond Code', href: '/beyond-code', isHash: false, isSpecial: true },
     ];
