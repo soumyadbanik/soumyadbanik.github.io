@@ -5,6 +5,7 @@ export const resumeData = {
         email: "soumya.d.banik@gmail.com",
         github: "https://github.com/soumyadbanik",
         linkedin: "https://www.linkedin.com/in/soumya-d-banik",
+        scholar: "https://scholar.google.com/citations?user=7ou0AxEAAAAJ&hl=en",
         phone: "+91 8478860607",
         location: "Mumbai, Maharashtra, India",
         about: "I develop computer vision systems at the intersection of geometry and learning. My industry work has focused on real-time tracking, 3D reconstruction, and activity recognition in challenging scenarios. I am transitioning toward PhD research in Computer Vision, aiming to advance foundational methods in multi-view 3D understanding and human motion analysis.",
