@@ -3,6 +3,7 @@ import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-d
 import Navbar from './components/Navbar';
 import AnimatedBackground from './components/AnimatedBackground';
 import ScrollProgress from './components/ScrollProgress';
+import VisitorMap from './components/VisitorMap';
 import Home from './pages/Home';
 import BeyondCode from './pages/BeyondCode';
 import SketchesPage from './pages/SketchesPage';
@@ -108,6 +109,7 @@ function App() {
                         {/* <p>Soumyadeep Banik</p> */}
                         <p style={{ marginTop: '0.5rem', opacity: 0.6 }}>© {new Date().getFullYear()} Soumyadeep Banik</p>
                         {SHOW_VISITOR_COUNTER && <VisitorCounter />}
+                        <VisitorMap />
                     </div>
                 </footer>
             </div>
