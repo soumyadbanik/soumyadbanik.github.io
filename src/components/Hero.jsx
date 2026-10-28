@@ -159,9 +159,9 @@ const Hero = () => {
                             onMouseEnter={(e) => handleIconHover(e, true)}
                             onMouseLeave={(e) => handleIconHover(e, false)}
                         >
-                            {/* lucide-react has no Google Scholar icon */}
-                            <svg width="20" height="20" viewBox="-1 -1 26 26" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" aria-hidden="true">
-                                <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z" />
+                            {/* Google Scholar's blue cap (Material "school" icon); lucide-react has no Scholar icon */}
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="#4285F4" aria-hidden="true">
+                                <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z" />
                             </svg>
                         </a>
                         <a
